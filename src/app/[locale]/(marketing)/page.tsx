@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { AirportPickup } from '@/components/AirportPickup';
+import { BeforeYouBook } from '@/components/BeforeYouBook';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
 import { TravelOptions } from '@/components/TravelOptions';
@@ -170,6 +172,77 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const airportPickupItems = [
+    {
+      icon: 'tracking',
+      title: t('airport_pickup_tracking_title'),
+      description: t('airport_pickup_tracking_description'),
+    },
+    {
+      icon: 'driver',
+      title: t('airport_pickup_meeting_title'),
+      description: t('airport_pickup_meeting_description'),
+    },
+    {
+      icon: 'luggage',
+      title: t('airport_pickup_luggage_title'),
+      description: t('airport_pickup_luggage_description'),
+    },
+  ] as const;
+
+  const beforeYouBookCards = [
+    {
+      icon: 'pricing',
+      title: t('before_you_book_pricing_title'),
+      description: t('before_you_book_pricing_description'),
+    },
+    {
+      icon: 'included',
+      title: t('before_you_book_included_title'),
+      description: t('before_you_book_included_description'),
+      items: [
+        t('before_you_book_included_item_1'),
+        t('before_you_book_included_item_2'),
+        t('before_you_book_included_item_3'),
+        t('before_you_book_included_item_4'),
+        t('before_you_book_included_item_5'),
+      ],
+      itemStyle: 'check',
+    },
+    {
+      icon: 'extra',
+      title: t('before_you_book_extra_title'),
+      description: t('before_you_book_extra_description'),
+      items: [
+        t('before_you_book_extra_item_1'),
+        t('before_you_book_extra_item_2'),
+        t('before_you_book_extra_item_3'),
+        t('before_you_book_extra_item_4'),
+      ],
+      itemStyle: 'bullet',
+    },
+    {
+      icon: 'transparency',
+      title: t('before_you_book_transparency_title'),
+      description: t('before_you_book_transparency_description'),
+    },
+  ] as const;
+
+  const beforeYouBookPoints = [
+    {
+      title: t('before_you_book_point_transparent_title'),
+      description: t('before_you_book_point_transparent_description'),
+    },
+    {
+      title: t('before_you_book_point_flexible_title'),
+      description: t('before_you_book_point_flexible_description'),
+    },
+    {
+      title: t('before_you_book_point_secure_title'),
+      description: t('before_you_book_point_secure_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -256,6 +329,22 @@ export default async function IndexPage(props: IndexPageProps) {
         steps={howItWorksSteps}
         confirmationLabel={t('how_it_works_confirmation_label')}
         confirmationDescription={t('how_it_works_confirmation_description')}
+      />
+
+      <AirportPickup
+        title={t('airport_pickup_title')}
+        description={t('airport_pickup_description')}
+        image="/assets/images/pickupImage.png"
+        imageAlt={t('airport_pickup_image_alt')}
+        arrowImage="/assets/images/errow.png"
+        items={airportPickupItems}
+      />
+
+      <BeforeYouBook
+        title={t('before_you_book_title')}
+        description={t('before_you_book_description')}
+        cards={beforeYouBookCards}
+        points={beforeYouBookPoints}
       />
     </>
   );
