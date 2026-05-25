@@ -13,6 +13,7 @@ import { HowItWorks } from '@/components/HowItWorks';
 import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
+import { WhyChooseKaiya } from '@/components/WhyChooseKaiya';
 import { Link } from '@/libs/I18nNavigation';
 
 type IndexPageProps = {
@@ -577,6 +578,25 @@ export default async function IndexPage(props: IndexPageProps) {
       />
 
       <CoreValues title={t('core_values_title')} items={coreValues} />
+
+      {/* ── Why Choose Kaiya ── */}
+      <WhyChooseKaiya
+        title={t('why_choose_title')}
+        image1="/assets/images/aboutKaiya.jpg"
+        image1Alt={t('why_choose_image_1_alt')}
+        image2="/assets/images/aboutKaiya.jpg"
+        image2Alt={t('why_choose_image_2_alt')}
+        topItems={[
+          { title: t('why_choose_item_1_title'), description: t('why_choose_item_1_description') },
+          { title: t('why_choose_item_2_title'), description: t('why_choose_item_2_description') },
+          { title: t('why_choose_item_3_title'), description: t('why_choose_item_3_description') },
+        ]}
+        bottomItems={[
+          { title: t('why_choose_item_4_title'), description: t('why_choose_item_4_description') },
+          { title: t('why_choose_item_5_title'), description: t('why_choose_item_5_description') },
+          { title: t('why_choose_item_6_title'), description: t('why_choose_item_6_description') },
+        ]}
+      />
     </>
   );
 }

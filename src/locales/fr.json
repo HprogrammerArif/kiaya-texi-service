@@ -201,7 +201,22 @@
     "core_values_customer_title": "Excellence axée sur le client",
     "core_values_customer_description": "Votre confort et votre satisfaction sont notre priorité absolue. Nos chauffeurs sont formés à l'excellence du service client, et notre équipe d'assistance est toujours disponible pour répondre à vos questions, satisfaire vos demandes particulières et résoudre rapidement vos préoccupations.",
     "core_values_quality_title": "Excellence de la qualité",
-    "core_values_quality_description": "De l'entretien des véhicules à la formation des chauffeurs en passant par la communication client, nous maintenons les normes les plus élevées dans tous les aspects. La qualité n'est pas optionnelle : c'est notre engagement indéfectible envers vous."
+    "core_values_quality_description": "De l'entretien des véhicules à la formation des chauffeurs en passant par la communication client, nous maintenons les normes les plus élevées dans tous les aspects. La qualité n'est pas optionnelle : c'est notre engagement indéfectible envers vous.",
+    "why_choose_title": "Pourquoi choisir Kaiya",
+    "why_choose_item_1_title": "Chauffeurs professionnels",
+    "why_choose_item_1_description": "Des professionnels certifiés, formés et courtois dévoués à votre confort",
+    "why_choose_item_2_title": "Flotte moderne",
+    "why_choose_item_2_description": "Véhicules bien entretenus avec des équipements haut de gamme et des caractéristiques de sécurité",
+    "why_choose_item_3_title": "Tarification transparente",
+    "why_choose_item_3_description": "Devis clairs et préalables sans frais cachés ni mauvaises surprises",
+    "why_choose_item_4_title": "Assistance 24h/24 7j/7",
+    "why_choose_item_4_description": "Toujours disponible pour répondre à vos besoins et demandes de transport",
+    "why_choose_item_5_title": "Suivi en temps réel",
+    "why_choose_item_5_description": "Suivi des vols et mises à jour en direct pour une tranquillité d'esprit totale",
+    "why_choose_item_6_title": "Solutions sur mesure",
+    "why_choose_item_6_description": "Arrangements personnalisés pour vos exigences et préférences de voyage uniques",
+    "why_choose_image_1_alt": "Chauffeur Kaiya ouvrant la porte d'un véhicule haut de gamme",
+    "why_choose_image_2_alt": "Chauffeur Kaiya prêt à aider les passagers avec leurs bagages"
   },
   "SignIn": {
     "meta_title": "Se connecter",
