@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/libs/I18nNavigation';
 
@@ -54,77 +55,66 @@ export default async function IndexPage(props: IndexPageProps) {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-white">
-        {/* Subtle background grid */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              'linear-gradient(#111 1px, transparent 1px), linear-gradient(to right, #111 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
-
-        {/* Gradient glow */}
-        <div className="pointer-events-none absolute inset-x-0 -top-40 -z-10 flex justify-center">
-          <div className="h-96 w-[600px] rounded-full bg-gradient-to-r from-violet-200 via-sky-200 to-emerald-200 opacity-30 blur-3xl" />
+      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden py-24 sm:py-32">
+        {/* Background Image Container */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/images/bacggroundOverlayImage.jpg"
+            alt="Premium Private Travel Background"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+          {/* Dark overlay to ensure high contrast and readability */}
+          <div className="absolute inset-0 bg-black/60 sm:bg-black/55" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-24 pb-20 text-center sm:px-6 sm:pt-32 sm:pb-28 lg:px-8">
-          {/* Badge */}
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-600 shadow-sm">
-            <span className="size-2 rounded-full bg-emerald-400" />
-            Next.js 16 · TypeScript · Tailwind v4
-          </span>
-
+        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           {/* Headline */}
-          <h1 className="mx-auto max-w-3xl text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-            {t('hero_title')}{' '}
-            <span className="bg-gradient-to-r from-violet-600 to-sky-500 bg-clip-text text-transparent">
-              {t('hero_title_highlight')}
-            </span>
+          <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-tight whitespace-pre-line">
+            {t('hero_title')}
           </h1>
-
-          {/* Sub-description */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-500">
-            {t('hero_description')}
-          </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/sign-up/"
-              className="rounded-xl bg-gray-900 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-gray-700 hover:shadow-md"
+              href="/#bookings"
+              className="w-full sm:w-auto rounded-xl bg-white px-8 py-3.5 text-base font-bold text-gray-900 shadow-sm transition-all hover:bg-gray-100 hover:shadow-md hover:scale-105 active:scale-95 text-center"
             >
-              {t('hero_cta_primary')} →
+              {t('hero_cta_primary')}
             </Link>
             <Link
-              href="/sign-in/"
-              className="rounded-xl border border-gray-200 bg-white px-7 py-3.5 text-sm font-semibold text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:bg-gray-50"
+              href="/#contact"
+              className="w-full sm:w-auto rounded-xl border border-white bg-transparent px-8 py-3.5 text-base font-bold text-white shadow-sm transition-all hover:bg-white/10 hover:shadow-md hover:scale-105 active:scale-95 text-center"
             >
               {t('hero_cta_secondary')}
             </Link>
           </div>
 
-          {/* Tech pills */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
-            {[
-              'Drizzle ORM',
-              'next-intl',
-              'Zod',
-              'Vitest',
-              'Playwright',
-              'Sentry',
-              'Storybook',
-              'Lefthook',
-            ].map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-gray-100 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-500"
-              >
-                {tech}
+          {/* Features Horizontal Pill Bar */}
+          <div className="mt-16 sm:mt-24 flex justify-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-2xl sm:rounded-full bg-black/30 border border-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md">
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-white font-bold">✓</span>
+                {t('hero_feature_1')}
               </span>
-            ))}
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-white font-bold">✓</span>
+                {t('hero_feature_2')}
+              </span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-white font-bold">✓</span>
+                {t('hero_feature_3')}
+              </span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-white font-bold">✓</span>
+                {t('hero_feature_4')}
+              </span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-white font-bold">✓</span>
+                {t('hero_feature_5')}
+              </span>
+            </div>
           </div>
         </div>
       </section>
