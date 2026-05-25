@@ -1,8 +1,13 @@
 {
   "RootLayout": {
     "home_link": "Accueil",
+    "services_link": "Services",
+    "bookings_link": "Réservations",
+    "about_link": "À propos",
+    "contact_link": "Contact",
     "sign_in_link": "Se connecter",
-    "sign_up_link": "S'inscrire"
+    "sign_up_link": "S'inscrire",
+    "book_now_link": "Réserver"
   },
 
   "Index": {

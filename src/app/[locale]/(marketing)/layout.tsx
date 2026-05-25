@@ -16,35 +16,63 @@ export default async function Layout(props: {
 
   return (
     <BaseTemplate
-      leftNav={
+      centerNav={
         <>
           <li>
             <Link
               href="/"
-              className="transition-colors hover:text-gray-900"
+              className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
             >
               {t('home_link')}
-            </Link>
-          </li>
-        </>
-      }
-      rightNav={
-        <>
-          <li>
-            <Link
-              href="/sign-in/"
-              className="transition-colors hover:text-gray-900"
-            >
-              {t('sign_in_link')}
             </Link>
           </li>
 
           <li>
             <Link
-              href="/sign-up/"
-              className="rounded-lg bg-gray-900 px-4 py-2 text-white transition-colors hover:bg-gray-700"
+              href="/#services"
+              className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
             >
-              {t('sign_up_link')}
+              {t('services_link')}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/#bookings"
+              className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+            >
+              {t('bookings_link')}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/#about"
+              className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+            >
+              {t('about_link')}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/#contact"
+              className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+            >
+              {t('contact_link')}
+            </Link>
+          </li>
+        </>
+      }
+
+      rightNav={
+        <>
+          <li>
+            <Link
+              href="/#bookings"
+              className="inline-block rounded-full bg-slate-950 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-slate-800 active:scale-95 shadow-xs"
+            >
+              {t('book_now_link')}
             </Link>
           </li>
 
