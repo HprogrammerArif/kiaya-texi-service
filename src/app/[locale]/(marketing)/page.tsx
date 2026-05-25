@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { AirportPickup } from '@/components/AirportPickup';
 import { BeforeYouBook } from '@/components/BeforeYouBook';
+import { ChangesDelaysWaitingTime } from '@/components/ChangesDelaysWaitingTime';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
 import { TravelOptions } from '@/components/TravelOptions';
@@ -243,6 +244,29 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const changesDelaysWaitingTimeCards = [
+    {
+      icon: 'waiting',
+      title: t('changes_delays_waiting_time_included_title'),
+      description: t('changes_delays_waiting_time_included_description'),
+    },
+    {
+      icon: 'beyond',
+      title: t('changes_delays_waiting_time_beyond_title'),
+      description: t('changes_delays_waiting_time_beyond_description'),
+    },
+    {
+      icon: 'modify',
+      title: t('changes_delays_waiting_time_modify_title'),
+      description: t('changes_delays_waiting_time_modify_description'),
+    },
+    {
+      icon: 'cancellation',
+      title: t('changes_delays_waiting_time_cancellations_title'),
+      description: t('changes_delays_waiting_time_cancellations_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -345,6 +369,16 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('before_you_book_description')}
         cards={beforeYouBookCards}
         points={beforeYouBookPoints}
+      />
+
+      <ChangesDelaysWaitingTime
+        title={t('changes_delays_waiting_time_title')}
+        description={t('changes_delays_waiting_time_description')}
+        cards={changesDelaysWaitingTimeCards}
+        supportTitle={t('changes_delays_waiting_time_support_title')}
+        supportDescription={t(
+          'changes_delays_waiting_time_support_description',
+        )}
       />
     </>
   );

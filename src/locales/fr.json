@@ -128,7 +128,19 @@
     "before_you_book_point_flexible_title": "Flexible",
     "before_you_book_point_flexible_description": "Modifiez vos réservations jusqu'à 24 heures avant la prise en charge",
     "before_you_book_point_secure_title": "Sécurisé",
-    "before_you_book_point_secure_description": "Prix verrouillé dès confirmation de votre réservation"
+    "before_you_book_point_secure_description": "Prix verrouillé dès confirmation de votre réservation",
+    "changes_delays_waiting_time_title": "Modifications, retards et temps d'attente",
+    "changes_delays_waiting_time_description": "Nous comprenons que les plans de voyage peuvent changer. Voici comment nous gérons les modifications, les retards et le temps d'attente avec clarté et flexibilité.",
+    "changes_delays_waiting_time_included_title": "Temps d'attente inclus",
+    "changes_delays_waiting_time_included_description": "Chaque réservation inclut jusqu'à 2 heures d'attente offertes. Cela couvre les retards de vol, la récupération des bagages ou de courts arrêts aux lieux de votre choix.",
+    "changes_delays_waiting_time_beyond_title": "Au-delà de 2 heures",
+    "changes_delays_waiting_time_beyond_description": "Si vous avez besoin d'un temps d'attente supérieur à 2 heures (par exemple en cas de retard prolongé à l'aéroport), des frais supplémentaires s'appliquent à notre tarif horaire. Nous vous l'indiquerons clairement avant toute facturation.",
+    "changes_delays_waiting_time_modify_title": "Modifier votre réservation",
+    "changes_delays_waiting_time_modify_description": "Les changements d'heure, de lieu ou de type de véhicule doivent nous être communiqués dès que possible. Nous ferons de notre mieux pour accepter les demandes jusqu'à 24 heures avant votre prise en charge prévue.",
+    "changes_delays_waiting_time_cancellations_title": "Annulations",
+    "changes_delays_waiting_time_cancellations_description": "Les annulations effectuées 24 heures ou plus à l'avance n'entraînent aucun frais. Les annulations dans les 24 heures peuvent entraîner des frais de service. Contactez-nous immédiatement si vos plans changent.",
+    "changes_delays_waiting_time_support_title": "Nous sommes là pour vous aider",
+    "changes_delays_waiting_time_support_description": "Vos plans de voyage sont importants pour nous. Que vous deviez modifier votre réservation, gérer un retard inattendu ou discuter d'ajustements de paiement, notre équipe d'assistance est disponible avec flexibilité et professionnalisme."
   },
   "SignIn": {
     "meta_title": "Se connecter",

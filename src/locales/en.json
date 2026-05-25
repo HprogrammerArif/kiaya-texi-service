@@ -128,7 +128,19 @@
     "before_you_book_point_flexible_title": "Flexible",
     "before_you_book_point_flexible_description": "Modify bookings up to 24 hours before pickup",
     "before_you_book_point_secure_title": "Secure",
-    "before_you_book_point_secure_description": "Price locked in once you confirm your booking"
+    "before_you_book_point_secure_description": "Price locked in once you confirm your booking",
+    "changes_delays_waiting_time_title": "Changes, Delays & Waiting Time",
+    "changes_delays_waiting_time_description": "We understand travel plans can change. Here's how we handle modifications, delays, and waiting time with clarity and flexibility.",
+    "changes_delays_waiting_time_included_title": "Included Waiting Time",
+    "changes_delays_waiting_time_included_description": "Every booking includes up to 2 hours of complimentary waiting time. This covers flight delays, luggage collection, or brief stops at your preferred locations.",
+    "changes_delays_waiting_time_beyond_title": "Beyond 2 Hours",
+    "changes_delays_waiting_time_beyond_description": "If you need waiting time beyond 2 hours (e.g., extended airport delays), additional charges apply at our hourly rate. We'll communicate this with you clearly before charging.",
+    "changes_delays_waiting_time_modify_title": "Modifying Your Booking",
+    "changes_delays_waiting_time_modify_description": "Changes to time, location, or vehicle type must be communicated to us as soon as possible. We'll do our best to accommodate requests up to 24 hours before your scheduled pickup.",
+    "changes_delays_waiting_time_cancellations_title": "Cancellations",
+    "changes_delays_waiting_time_cancellations_description": "Cancellations 24+ hours in advance incur no charge. Cancellations within 24 hours may incur a service fee. Contact us immediately if plans change.",
+    "changes_delays_waiting_time_support_title": "We're Here to Help",
+    "changes_delays_waiting_time_support_description": "Your travel plans are important to us. Whether you need to modify your booking, handle unexpected delays, or discuss payment adjustments, our support team is available to assist you with flexibility and professionalism."
   },
   "SignIn": {
     "meta_title": "Sign in",
