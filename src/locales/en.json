@@ -21,14 +21,15 @@
     "hero_feature_3": "Transparent pricing",
     "hero_feature_4": "Airport support",
     "hero_feature_5": "Private rides",
-    "features_title": "Three modes, one starter",
-    "features_subtitle": "Choose the architecture that fits your project. Everything else stays the same.",
-    "feature_1_title": "Landing Page",
-    "feature_1_description": "Pure frontend. No database required. Build fast, static, or dynamic marketing sites with full i18n, SEO, and Tailwind styling out of the box.",
-    "feature_2_title": "Custom Backend",
-    "feature_2_description": "Connect to your own external API using the built-in ApiClient. Your Next.js app stays lean — just UI and data fetching from your separate backend.",
-    "feature_3_title": "Full Stack",
-    "feature_3_description": "Built-in backend with Drizzle ORM, PostgreSQL, and Next.js Route Handlers. Everything you need for a production app, right inside this project."
+    "features_title": "A Smoother Way to Arrive and Move",
+    "feature_1_title": "Airport Arrivals",
+    "feature_1_description": "Professional pickup at New Chitose Airport with real-time flight tracking and hassle-free arrival support.",
+    "feature_2_title": "Hotel & Transfers",
+    "feature_2_description": "Seamless transfers between hotels, attractions, and transportation hubs throughout Hokkaido.",
+    "feature_3_title": "Custom Routes",
+    "feature_3_description": "Point-to-point journeys tailored to your schedule with comfortable, professional vehicles.",
+    "feature_4_title": "Hourly Charter",
+    "feature_4_description": "Flexible hourly rates for exploring Hokkaido at your own pace with a dedicated vehicle and driver."
   },
   "SignIn": {
     "meta_title": "Sign in",

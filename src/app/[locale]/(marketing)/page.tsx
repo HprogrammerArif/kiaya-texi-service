@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Features } from '@/components/Features';
 import { Link } from '@/libs/I18nNavigation';
 
 type IndexPageProps = {
@@ -24,31 +25,24 @@ export default async function IndexPage(props: IndexPageProps) {
 
   const features = [
     {
-      icon: '🖥️',
+      icon: '/assets/icons/airplane.svg',
       title: t('feature_1_title'),
       description: t('feature_1_description'),
-      badge: 'Mode 1',
-      accent: 'bg-violet-50 border-violet-100',
-      badgeColor: 'bg-violet-100 text-violet-700',
-      iconBg: 'bg-violet-100',
     },
     {
-      icon: '🔌',
+      icon: '/assets/icons/hotel.svg',
       title: t('feature_2_title'),
       description: t('feature_2_description'),
-      badge: 'Mode 2',
-      accent: 'bg-sky-50 border-sky-100',
-      badgeColor: 'bg-sky-100 text-sky-700',
-      iconBg: 'bg-sky-100',
     },
     {
-      icon: '⚡',
+      icon: '/assets/icons/location.svg',
       title: t('feature_3_title'),
       description: t('feature_3_description'),
-      badge: 'Mode 3',
-      accent: 'bg-emerald-50 border-emerald-100',
-      badgeColor: 'bg-emerald-100 text-emerald-700',
-      iconBg: 'bg-emerald-100',
+    },
+    {
+      icon: '/assets/icons/stopwatch.svg',
+      title: t('feature_4_title'),
+      description: t('feature_4_description'),
     },
   ] as const;
 
@@ -119,51 +113,8 @@ export default async function IndexPage(props: IndexPageProps) {
         </div>
       </section>
 
-      {/* ── Features / Modes ── */}
-      <section className="bg-gray-50 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section header */}
-          <div className="mb-14 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {t('features_title')}
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">
-              {t('features_subtitle')}
-            </p>
-          </div>
-
-          {/* Feature cards */}
-          <div className="grid gap-6 sm:grid-cols-3">
-            {features.map((feature) => (
-              <div
-                key={feature.badge}
-                className={`rounded-2xl border p-8 transition-shadow hover:shadow-md ${feature.accent}`}
-              >
-                {/* Mode badge */}
-                <span
-                  className={`mb-4 inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${feature.badgeColor}`}
-                >
-                  {feature.badge}
-                </span>
-
-                {/* Icon */}
-                <div
-                  className={`mb-4 flex size-12 items-center justify-center rounded-xl text-2xl ${feature.iconBg}`}
-                >
-                  {feature.icon}
-                </div>
-
-                <h3 className="mb-2 text-lg font-bold text-gray-900">
-                  {feature.title}
-                </h3>
-                <p className="text-sm leading-6 text-gray-500">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── Features ── */}
+      <Features title={t('features_title')} items={features} />
 
       {/* ── Bottom CTA strip ── */}
       <section className="border-t border-gray-100 bg-white py-16">
