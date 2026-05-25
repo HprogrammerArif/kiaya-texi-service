@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Link } from '@/libs/I18nNavigation';
@@ -63,22 +64,13 @@ export const BaseTemplate = (props: {
             <div className="flex flex-col gap-5">
               {/* Logo */}
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-slate-950 shadow-xs">
-                  <svg
-                    className="h-6 w-6 text-slate-950"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                    <circle cx="7" cy="17" r="2" />
-                    <path d="M9 17h6" />
-                    <circle cx="17" cy="17" r="2" />
-                  </svg>
-                </div>
+                <Image
+                  src="/assets/icons/kaiyalogo.svg"
+                  alt="Kiaya Taxi Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-xl shadow-xs"
+                />
                 <span className="text-xl font-bold tracking-tight text-white lowercase">
                   kiaya taxi
                 </span>
@@ -94,21 +86,15 @@ export const BaseTemplate = (props: {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 text-white transition-transform hover:scale-105 active:scale-95 shadow-sm"
+                  className="transition-transform hover:scale-105 active:scale-95"
                 >
-                  <svg
-                    className="h-5 w-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                  </svg>
+                  <Image
+                    src="/assets/icons/instagram.svg"
+                    alt="Instagram"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 rounded-full shadow-sm"
+                  />
                 </a>
 
                 <a
@@ -116,11 +102,15 @@ export const BaseTemplate = (props: {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0a66c2] text-white transition-transform hover:scale-105 active:scale-95 shadow-sm"
+                  className="transition-transform hover:scale-105 active:scale-95"
                 >
-                  <svg className="h-4.5 w-4.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
+                  <Image
+                    src="/assets/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 rounded-full shadow-sm"
+                  />
                 </a>
 
                 <a
@@ -128,11 +118,15 @@ export const BaseTemplate = (props: {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877f2] text-white transition-transform hover:scale-105 active:scale-95 shadow-sm"
+                  className="transition-transform hover:scale-105 active:scale-95"
                 >
-                  <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
+                  <Image
+                    src="/assets/icons/facebook.svg"
+                    alt="Facebook"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 rounded-full shadow-sm"
+                  />
                 </a>
               </div>
             </div>
