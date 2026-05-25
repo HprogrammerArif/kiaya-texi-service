@@ -192,7 +192,16 @@
     "about_kaiya_title": "À propos de KAIYA",
     "about_kaiya_paragraph_1": "Kaiya est un service premium de transport privé dédié à transformer les déplacements à travers Hokkaido. Nous associons expertise professionnelle, véhicules modernes et service client exceptionnel pour offrir des trajets fiables, confortables et sans stress.",
     "about_kaiya_paragraph_2": "Fondée sur des principes de fiabilité, de professionnalisme et d'engagement envers le client, Kaiya est devenue le choix privilégié des voyageurs recherchant des services premium de transport terrestre sur la magnifique île du nord du Japon.",
-    "about_kaiya_image_alt": "Chauffeur Kaiya ouvrant la porte d'un véhicule premium pour un passager"
+    "about_kaiya_image_alt": "Chauffeur Kaiya ouvrant la porte d'un véhicule premium pour un passager",
+    "core_values_title": "Nos valeurs fondamentales",
+    "core_values_philosophy_title": "Philosophie de service",
+    "core_values_philosophy_description": "Nous croyons que chaque trajet doit être fiable, confortable et sans stress. Que vous arriviez à l'aéroport, exploriez Hokkaido ou voyagiez pour affaires, Kaiya veille à ce que vous arriviez à l'heure, reposé et satisfait.",
+    "core_values_reliability_title": "Fiabilité et constance",
+    "core_values_reliability_description": "Forte d'une vaste expérience du transport à Hokkaido, notre équipe connaît chaque itinéraire et comprend les conditions locales. La ponctualité et la constance sont non négociables : vous pouvez compter sur Kaiya à chaque fois.",
+    "core_values_customer_title": "Excellence axée sur le client",
+    "core_values_customer_description": "Votre confort et votre satisfaction sont notre priorité absolue. Nos chauffeurs sont formés à l'excellence du service client, et notre équipe d'assistance est toujours disponible pour répondre à vos questions, satisfaire vos demandes particulières et résoudre rapidement vos préoccupations.",
+    "core_values_quality_title": "Excellence de la qualité",
+    "core_values_quality_description": "De l'entretien des véhicules à la formation des chauffeurs en passant par la communication client, nous maintenons les normes les plus élevées dans tous les aspects. La qualité n'est pas optionnelle : c'est notre engagement indéfectible envers vous."
   },
   "SignIn": {
     "meta_title": "Se connecter",

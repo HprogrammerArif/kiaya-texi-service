@@ -6,6 +6,7 @@ import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialR
 import { AirportPickup } from '@/components/AirportPickup';
 import { BeforeYouBook } from '@/components/BeforeYouBook';
 import { ChangesDelaysWaitingTime } from '@/components/ChangesDelaysWaitingTime';
+import { CoreValues } from '@/components/CoreValues';
 import { FaqSection } from '@/components/FaqSection';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
@@ -396,6 +397,29 @@ export default async function IndexPage(props: IndexPageProps) {
     t('about_kaiya_paragraph_2'),
   ] as const;
 
+  const coreValues = [
+    {
+      icon: '🎯',
+      title: t('core_values_philosophy_title'),
+      description: t('core_values_philosophy_description'),
+    },
+    {
+      icon: '⚡',
+      title: t('core_values_reliability_title'),
+      description: t('core_values_reliability_description'),
+    },
+    {
+      icon: '⭐',
+      title: t('core_values_customer_title'),
+      description: t('core_values_customer_description'),
+    },
+    {
+      icon: '✅',
+      title: t('core_values_quality_title'),
+      description: t('core_values_quality_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -551,6 +575,8 @@ export default async function IndexPage(props: IndexPageProps) {
         image="/assets/images/aboutKaiya.jpg"
         imageAlt={t('about_kaiya_image_alt')}
       />
+
+      <CoreValues title={t('core_values_title')} items={coreValues} />
     </>
   );
 }

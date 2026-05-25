@@ -192,7 +192,16 @@
     "about_kaiya_title": "About KAIYA",
     "about_kaiya_paragraph_1": "Kaiya is a premium private transportation service dedicated to transforming travel across Hokkaido. We combine professional expertise, modern vehicles, and exceptional customer service to deliver reliable, comfortable, and stress-free journeys.",
     "about_kaiya_paragraph_2": "Founded on principles of reliability, professionalism, and customer-first commitment, Kaiya has become the preferred choice for travelers seeking premium ground transportation services throughout Japan's stunning northern island.",
-    "about_kaiya_image_alt": "Kaiya driver opening a premium vehicle door for a passenger"
+    "about_kaiya_image_alt": "Kaiya driver opening a premium vehicle door for a passenger",
+    "core_values_title": "Our Core Values",
+    "core_values_philosophy_title": "Service Philosophy",
+    "core_values_philosophy_description": "We believe every journey should be reliable, comfortable, and stress-free. Whether arriving at the airport, exploring Hokkaido, or traveling for business, Kaiya ensures you arrive on time, refreshed, and satisfied.",
+    "core_values_reliability_title": "Reliability & Dependability",
+    "core_values_reliability_description": "With extensive experience in Hokkaido's transportation landscape, our team knows every route and understands local conditions. Punctuality and consistency are non-negotiable—you can depend on Kaiya every single time.",
+    "core_values_customer_title": "Customer-First Excellence",
+    "core_values_customer_description": "Your comfort and satisfaction are our top priority. Our drivers are trained in customer service excellence, and our support team is always available to answer questions, accommodate special requests, and resolve concerns promptly.",
+    "core_values_quality_title": "Quality Excellence",
+    "core_values_quality_description": "From vehicle maintenance and driver training to customer communication, we maintain the highest standards across every aspect. Quality isn't optional—it's our unwavering commitment to you."
   },
   "SignIn": {
     "meta_title": "Sign in",
