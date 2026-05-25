@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Features } from '@/components/Features';
 import { TravelOptions } from '@/components/TravelOptions';
+import { VehicleJourney } from '@/components/VehicleJourney';
 import { Link } from '@/libs/I18nNavigation';
 
 type IndexPageProps = {
@@ -90,6 +91,61 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const vehicleJourney = [
+    {
+      image: '/assets/images/Compact-Sedan.jpg',
+      title: t('vehicle_journey_compact_sedan_title'),
+      subtitle: t('vehicle_journey_compact_sedan_subtitle'),
+      description: t('vehicle_journey_compact_sedan_description'),
+      bullets: [
+        t('vehicle_journey_compact_sedan_bullet_1'),
+        t('vehicle_journey_compact_sedan_bullet_2'),
+        t('vehicle_journey_compact_sedan_bullet_3'),
+        t('vehicle_journey_compact_sedan_bullet_4'),
+      ],
+      imageSide: 'left',
+    },
+    {
+      image: '/assets/images/Mini-Van.png',
+      title: t('vehicle_journey_mini_van_title'),
+      subtitle: t('vehicle_journey_mini_van_subtitle'),
+      description: t('vehicle_journey_mini_van_description'),
+      bullets: [
+        t('vehicle_journey_mini_van_bullet_1'),
+        t('vehicle_journey_mini_van_bullet_2'),
+        t('vehicle_journey_mini_van_bullet_3'),
+        t('vehicle_journey_mini_van_bullet_4'),
+      ],
+      imageSide: 'right',
+    },
+    {
+      image: '/assets/images/Comfort-Van.jpg',
+      title: t('vehicle_journey_comfort_van_title'),
+      subtitle: t('vehicle_journey_comfort_van_subtitle'),
+      description: t('vehicle_journey_comfort_van_description'),
+      bullets: [
+        t('vehicle_journey_comfort_van_bullet_1'),
+        t('vehicle_journey_comfort_van_bullet_2'),
+        t('vehicle_journey_comfort_van_bullet_3'),
+        t('vehicle_journey_comfort_van_bullet_4'),
+      ],
+      imageSide: 'left',
+    },
+    {
+      image: '/assets/images/Premium-SUV.jpg',
+      title: t('vehicle_journey_premium_suv_title'),
+      subtitle: t('vehicle_journey_premium_suv_subtitle'),
+      description: t('vehicle_journey_premium_suv_description'),
+      bullets: [
+        t('vehicle_journey_premium_suv_bullet_1'),
+        t('vehicle_journey_premium_suv_bullet_2'),
+        t('vehicle_journey_premium_suv_bullet_3'),
+        t('vehicle_journey_premium_suv_bullet_4'),
+      ],
+      imageSide: 'right',
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -162,6 +218,11 @@ export default async function IndexPage(props: IndexPageProps) {
 
       {/* ── TRAVEL OPTIONS ── */}
       <TravelOptions title={t('travel_options_title')} items={travelOptions} />
+
+      <VehicleJourney
+        title={t('vehicle_journey_title')}
+        items={vehicleJourney}
+      />
     </>
   );
 }
