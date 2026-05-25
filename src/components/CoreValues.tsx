@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import * as React from 'react';
 
 type CoreValuesItem = {
@@ -33,11 +34,14 @@ export const CoreValues = (props: CoreValuesProps): React.ReactNode => {
               className="rounded-2xl bg-[#F5F5F5] p-7 sm:p-8"
             >
               <div className="flex items-center gap-3">
-                <span
-                  aria-hidden="true"
-                  className="text-2xl leading-none"
-                >
-                  {item.icon}
+                <span className="flex size-8 shrink-0 items-center justify-center" aria-hidden="true">
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={32}
+                    height={32}
+                    className="size-8 object-contain"
+                  />
                 </span>
                 <h3 className="text-lg font-extrabold text-slate-800">
                   {item.title}

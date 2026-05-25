@@ -399,22 +399,22 @@ export default async function IndexPage(props: IndexPageProps) {
 
   const coreValues = [
     {
-      icon: '🎯',
+      icon: '/assets/icons/philosofy.svg',
       title: t('core_values_philosophy_title'),
       description: t('core_values_philosophy_description'),
     },
     {
-      icon: '⚡',
+      icon: '/assets/icons/relailability.svg',
       title: t('core_values_reliability_title'),
       description: t('core_values_reliability_description'),
     },
     {
-      icon: '⭐',
+      icon: '/assets/icons/customer-first.svg',
       title: t('core_values_customer_title'),
       description: t('core_values_customer_description'),
     },
     {
-      icon: '✅',
+      icon: '/assets/icons/quality.svg',
       title: t('core_values_quality_title'),
       description: t('core_values_quality_description'),
     },
