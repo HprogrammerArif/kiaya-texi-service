@@ -79,7 +79,22 @@
     "vehicle_journey_premium_suv_bullet_1": "2-4 passengers",
     "vehicle_journey_premium_suv_bullet_2": "Spacious, luxurious interior",
     "vehicle_journey_premium_suv_bullet_3": "Premium amenities & features",
-    "vehicle_journey_premium_suv_bullet_4": "Executive & special occasions"
+    "vehicle_journey_premium_suv_bullet_4": "Executive & special occasions",
+    "how_it_works_eyebrow": "How it Work",
+    "how_it_works_title": "Your Journey, Step by Step",
+    "how_it_works_image_alt": "Professional driver greeting a traveler beside a premium car at the airport",
+    "how_it_works_step_1_title": "Submit Your Details",
+    "how_it_works_step_1_description": "Provide your pickup location, destination, date, time, and any special requests through our simple booking form.",
+    "how_it_works_step_2_title": "Instant Quote & Confirmation",
+    "how_it_works_step_2_description": "Our team reviews your request and sends you a detailed quote with vehicle type, final price, and confirmation within hours.",
+    "how_it_works_step_3_title": "Meet Your Driver",
+    "how_it_works_step_3_description": "On your travel day, your professional driver arrives on time, greets you courteously, and ensures your comfort throughout the journey.",
+    "how_it_works_step_4_title": "Safe, Comfortable Travel",
+    "how_it_works_step_4_description": "Enjoy your journey in a well-maintained vehicle. Our drivers know the roads and prioritize your safety and comfort at every moment.",
+    "how_it_works_step_5_title": "Arrive & Confirm",
+    "how_it_works_step_5_description": "Arrive at your destination safely. We welcome your feedback and are here to support you for any follow-up travel needs.",
+    "how_it_works_confirmation_label": "Booking Confirmation:",
+    "how_it_works_confirmation_description": "After you confirm the quote and make payment, your booking is locked in. You'll receive your driver's details, vehicle information, and direct contact number 24 hours before your scheduled pickup."
   },
   "SignIn": {
     "meta_title": "Sign in",

@@ -79,7 +79,22 @@
     "vehicle_journey_premium_suv_bullet_1": "2 à 4 passagers",
     "vehicle_journey_premium_suv_bullet_2": "Intérieur spacieux et luxueux",
     "vehicle_journey_premium_suv_bullet_3": "Équipements et fonctionnalités premium",
-    "vehicle_journey_premium_suv_bullet_4": "Affaires et occasions spéciales"
+    "vehicle_journey_premium_suv_bullet_4": "Affaires et occasions spéciales",
+    "how_it_works_eyebrow": "Comment ça marche",
+    "how_it_works_title": "Votre trajet, étape par étape",
+    "how_it_works_image_alt": "Chauffeur professionnel accueillant un voyageur près d'une voiture premium à l'aéroport",
+    "how_it_works_step_1_title": "Envoyez vos informations",
+    "how_it_works_step_1_description": "Indiquez votre lieu de prise en charge, votre destination, la date, l'heure et toute demande particulière via notre formulaire de réservation simple.",
+    "how_it_works_step_2_title": "Devis instantané et confirmation",
+    "how_it_works_step_2_description": "Notre équipe examine votre demande et vous envoie un devis détaillé avec le type de véhicule, le prix final et la confirmation sous quelques heures.",
+    "how_it_works_step_3_title": "Rencontrez votre chauffeur",
+    "how_it_works_step_3_description": "Le jour de votre trajet, votre chauffeur professionnel arrive à l'heure, vous accueille avec courtoisie et veille à votre confort tout au long du trajet.",
+    "how_it_works_step_4_title": "Trajet sûr et confortable",
+    "how_it_works_step_4_description": "Profitez de votre trajet dans un véhicule bien entretenu. Nos chauffeurs connaissent les routes et privilégient votre sécurité et votre confort à chaque instant.",
+    "how_it_works_step_5_title": "Arrivée et confirmation",
+    "how_it_works_step_5_description": "Arrivez à destination en toute sécurité. Vos retours sont les bienvenus et nous restons disponibles pour vos prochains besoins de déplacement.",
+    "how_it_works_confirmation_label": "Confirmation de réservation :",
+    "how_it_works_confirmation_description": "Après confirmation du devis et paiement, votre réservation est verrouillée. Vous recevrez les coordonnées de votre chauffeur, les informations du véhicule et un numéro de contact direct 24 heures avant votre prise en charge prévue."
   },
   "SignIn": {
     "meta_title": "Se connecter",

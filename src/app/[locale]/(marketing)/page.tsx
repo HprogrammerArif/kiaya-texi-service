@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Features } from '@/components/Features';
+import { HowItWorks } from '@/components/HowItWorks';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
 import { Link } from '@/libs/I18nNavigation';
@@ -146,6 +147,29 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const howItWorksSteps = [
+    {
+      title: t('how_it_works_step_1_title'),
+      description: t('how_it_works_step_1_description'),
+    },
+    {
+      title: t('how_it_works_step_2_title'),
+      description: t('how_it_works_step_2_description'),
+    },
+    {
+      title: t('how_it_works_step_3_title'),
+      description: t('how_it_works_step_3_description'),
+    },
+    {
+      title: t('how_it_works_step_4_title'),
+      description: t('how_it_works_step_4_description'),
+    },
+    {
+      title: t('how_it_works_step_5_title'),
+      description: t('how_it_works_step_5_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -222,6 +246,16 @@ export default async function IndexPage(props: IndexPageProps) {
       <VehicleJourney
         title={t('vehicle_journey_title')}
         items={vehicleJourney}
+      />
+
+      <HowItWorks
+        eyebrow={t('how_it_works_eyebrow')}
+        title={t('how_it_works_title')}
+        image="/assets/images/howItWorks.png"
+        imageAlt={t('how_it_works_image_alt')}
+        steps={howItWorksSteps}
+        confirmationLabel={t('how_it_works_confirmation_label')}
+        confirmationDescription={t('how_it_works_confirmation_description')}
       />
     </>
   );
