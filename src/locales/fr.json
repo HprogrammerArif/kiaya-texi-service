@@ -48,6 +48,21 @@
   },
   "LocaleSwitcher": {
     "change_language": "Changer de langue"
+  },
+  "Footer": {
+    "about_text": "Bienvenue chez kiaya taxi, votre prestataire de transport de confiance enregistré à kiaya, au Japon.",
+    "heading_quick_links": "LIENS RAPIDES",
+    "heading_legal": "JURIDIQUE",
+    "heading_contact": "CONTACT",
+    "link_services": "Services",
+    "link_about": "À propos",
+    "link_contact": "Contact",
+    "link_privacy": "Politique de confidentialité",
+    "link_terms": "Conditions d'utilisation",
+    "link_disclosure": "Divulgation commerciale",
+    "contact_phone": "+81 11-XXX-XXXX",
+    "contact_email": "info@hokkaidotaxi.com",
+    "contact_address": "Sapporo, Hokkaido, Japon"
   }
 }
 
