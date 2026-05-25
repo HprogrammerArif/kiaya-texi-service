@@ -5,6 +5,7 @@ import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialR
 import { AirportPickup } from '@/components/AirportPickup';
 import { BeforeYouBook } from '@/components/BeforeYouBook';
 import { ChangesDelaysWaitingTime } from '@/components/ChangesDelaysWaitingTime';
+import { FaqSection } from '@/components/FaqSection';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
 import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
@@ -315,6 +316,80 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const faqCategories = [
+    {
+      id: 'all',
+      label: t('faq_category_all'),
+    },
+    {
+      id: 'booking',
+      label: t('faq_category_booking'),
+    },
+    {
+      id: 'airport',
+      label: t('faq_category_airport'),
+    },
+    {
+      id: 'policy',
+      label: t('faq_category_policy'),
+    },
+    {
+      id: 'service',
+      label: t('faq_category_service'),
+    },
+  ] as const;
+
+  const faqItems = [
+    {
+      id: 'book-transfer',
+      category: 'booking',
+      question: t('faq_book_transfer_question'),
+      answer: t('faq_book_transfer_answer'),
+    },
+    {
+      id: 'hourly-charter',
+      category: 'service',
+      question: t('faq_hourly_charter_question'),
+      answer: t('faq_hourly_charter_answer'),
+    },
+    {
+      id: 'airport-pickup',
+      category: 'airport',
+      question: t('faq_airport_pickup_question'),
+      answer: t('faq_airport_pickup_answer'),
+    },
+    {
+      id: 'flight-delayed',
+      category: 'airport',
+      question: t('faq_flight_delayed_question'),
+      answer: t('faq_flight_delayed_answer'),
+    },
+    {
+      id: 'cancellation-policy',
+      category: 'policy',
+      question: t('faq_cancellation_policy_question'),
+      answer: t('faq_cancellation_policy_answer'),
+    },
+    {
+      id: 'booking-changes',
+      category: 'booking',
+      question: t('faq_booking_changes_question'),
+      answer: t('faq_booking_changes_answer'),
+    },
+    {
+      id: 'child-seats',
+      category: 'service',
+      question: t('faq_child_seats_question'),
+      answer: t('faq_child_seats_answer'),
+    },
+    {
+      id: 'payment-methods',
+      category: 'policy',
+      question: t('faq_payment_methods_question'),
+      answer: t('faq_payment_methods_answer'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -455,6 +530,13 @@ export default async function IndexPage(props: IndexPageProps) {
         cards={safetyServiceStandardsCards}
         termsLabel={t('safety_service_standards_terms_label')}
         termsDescription={t('safety_service_standards_terms_description')}
+      />
+
+      <FaqSection
+        title={t('faq_title')}
+        description={t('faq_description')}
+        categories={faqCategories}
+        items={faqItems}
       />
     </>
   );
