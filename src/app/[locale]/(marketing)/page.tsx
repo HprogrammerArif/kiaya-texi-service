@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Features } from '@/components/Features';
+import { TravelOptions } from '@/components/TravelOptions';
 import { Link } from '@/libs/I18nNavigation';
 
 type IndexPageProps = {
@@ -43,6 +44,49 @@ export default async function IndexPage(props: IndexPageProps) {
       icon: '/assets/icons/stopwatch.svg',
       title: t('feature_4_title'),
       description: t('feature_4_description'),
+    },
+  ] as const;
+
+  const travelOptions = [
+    {
+      icon: '/assets/icons/planeIcon.svg',
+      title: t('travel_option_1_title'),
+      description: t('travel_option_1_description'),
+      bullets: [
+        t('travel_option_1_bullet_1'),
+        t('travel_option_1_bullet_2'),
+        t('travel_option_1_bullet_3'),
+      ],
+    },
+    {
+      icon: '/assets/icons/hotelIcon.svg',
+      title: t('travel_option_2_title'),
+      description: t('travel_option_2_description'),
+      bullets: [
+        t('travel_option_2_bullet_1'),
+        t('travel_option_2_bullet_2'),
+        t('travel_option_2_bullet_3'),
+      ],
+    },
+    {
+      icon: '/assets/icons/pointIcon.svg',
+      title: t('travel_option_3_title'),
+      description: t('travel_option_3_description'),
+      bullets: [
+        t('travel_option_3_bullet_1'),
+        t('travel_option_3_bullet_2'),
+        t('travel_option_3_bullet_3'),
+      ],
+    },
+    {
+      icon: '/assets/icons/fixIcon.svg',
+      title: t('travel_option_4_title'),
+      description: t('travel_option_4_description'),
+      bullets: [
+        t('travel_option_4_bullet_1'),
+        t('travel_option_4_bullet_2'),
+        t('travel_option_4_bullet_3'),
+      ],
     },
   ] as const;
 
@@ -116,35 +160,8 @@ export default async function IndexPage(props: IndexPageProps) {
       {/* ── Features ── */}
       <Features title={t('features_title')} items={features} />
 
-      {/* ── Bottom CTA strip ── */}
-      <section className="border-t border-gray-100 bg-white py-16">
-        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-            Ready to build?
-          </h2>
-          <p className="mt-3 text-base text-gray-500">
-            Open{' '}
-            <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm text-gray-700">
-              AppConfig.ts
-            </code>{' '}
-            to rename the app, then delete what you don't need.
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/sign-up/"
-              className="rounded-xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-700"
-            >
-              Create an account
-            </Link>
-            <Link
-              href="/sign-in/"
-              className="text-sm font-medium text-gray-500 hover:text-gray-900"
-            >
-              Already have one? Sign in →
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* ── TRAVEL OPTIONS ── */}
+      <TravelOptions title={t('travel_options_title')} items={travelOptions} />
     </>
   );
 }
