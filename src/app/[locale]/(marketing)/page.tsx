@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { AboutKaiya } from '@/components/AboutKaiya';
 import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialRequests';
 import { AirportPickup } from '@/components/AirportPickup';
 import { BeforeYouBook } from '@/components/BeforeYouBook';
@@ -390,6 +391,11 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const aboutKaiyaParagraphs = [
+    t('about_kaiya_paragraph_1'),
+    t('about_kaiya_paragraph_2'),
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -537,6 +543,13 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('faq_description')}
         categories={faqCategories}
         items={faqItems}
+      />
+
+      <AboutKaiya
+        title={t('about_kaiya_title')}
+        paragraphs={aboutKaiyaParagraphs}
+        image="/assets/images/aboutKaiya.jpg"
+        imageAlt={t('about_kaiya_image_alt')}
       />
     </>
   );

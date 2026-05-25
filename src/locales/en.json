@@ -188,7 +188,11 @@
     "faq_payment_methods_question": "What payment methods do you accept?",
     "faq_payment_methods_answer": "We accept credit cards, bank transfers, and cash payments. Once you confirm your booking, the agreed price is locked in.",
     "faq_child_seats_question": "Are child seats available?",
-    "faq_child_seats_answer": "Yes. Child seats are available free of charge when requested in advance. Select your child's age group when booking so we can prepare the right seat."
+    "faq_child_seats_answer": "Yes. Child seats are available free of charge when requested in advance. Select your child's age group when booking so we can prepare the right seat.",
+    "about_kaiya_title": "About KAIYA",
+    "about_kaiya_paragraph_1": "Kaiya is a premium private transportation service dedicated to transforming travel across Hokkaido. We combine professional expertise, modern vehicles, and exceptional customer service to deliver reliable, comfortable, and stress-free journeys.",
+    "about_kaiya_paragraph_2": "Founded on principles of reliability, professionalism, and customer-first commitment, Kaiya has become the preferred choice for travelers seeking premium ground transportation services throughout Japan's stunning northern island.",
+    "about_kaiya_image_alt": "Kaiya driver opening a premium vehicle door for a passenger"
   },
   "SignIn": {
     "meta_title": "Sign in",
