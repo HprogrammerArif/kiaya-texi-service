@@ -140,7 +140,21 @@
     "changes_delays_waiting_time_cancellations_title": "Annulations",
     "changes_delays_waiting_time_cancellations_description": "Les annulations effectuées 24 heures ou plus à l'avance n'entraînent aucun frais. Les annulations dans les 24 heures peuvent entraîner des frais de service. Contactez-nous immédiatement si vos plans changent.",
     "changes_delays_waiting_time_support_title": "Nous sommes là pour vous aider",
-    "changes_delays_waiting_time_support_description": "Vos plans de voyage sont importants pour nous. Que vous deviez modifier votre réservation, gérer un retard inattendu ou discuter d'ajustements de paiement, notre équipe d'assistance est disponible avec flexibilité et professionnalisme."
+    "changes_delays_waiting_time_support_description": "Vos plans de voyage sont importants pour nous. Que vous deviez modifier votre réservation, gérer un retard inattendu ou discuter d'ajustements de paiement, notre équipe d'assistance est disponible avec flexibilité et professionnalisme.",
+    "accessibility_special_requests_title": "Accessibilité et demandes spéciales",
+    "accessibility_special_requests_description": "Nous nous engageons à servir tous les voyageurs. Que vous ayez des besoins d'accessibilité spécifiques ou des demandes particulières, nous sommes là pour vous accompagner.",
+    "accessibility_special_requests_child_seats_title": "Sièges enfant et sécurité des enfants",
+    "accessibility_special_requests_child_seats_description": "Des sièges enfant sont disponibles gratuitement sur demande préalable. Sélectionnez simplement la tranche d'âge de votre enfant lors de la réservation et nous préparerons le siège adapté pour un trajet sûr.",
+    "accessibility_special_requests_wheelchair_title": "Fauteuil roulant et assistance mobilité",
+    "accessibility_special_requests_wheelchair_description": "Nous accueillons les passagers ayant des besoins de mobilité. Informez-nous lors de la réservation et nous organiserons un véhicule adapté avec l'accès et l'espace nécessaires à votre confort et à votre sécurité.",
+    "accessibility_special_requests_pet_title": "Voyage avec animal",
+    "accessibility_special_requests_pet_description": "Vous voyagez avec un animal ? Indiquez-nous les détails lors de la réservation. Nous pouvons prévoir un accueil adapté pour votre compagnon dans un véhicule propre, confortable et bien entretenu.",
+    "accessibility_special_requests_language_title": "Assistance linguistique",
+    "accessibility_special_requests_language_description": "Nos chauffeurs parlent japonais et un anglais de base. Pour des besoins de communication complexes ou des exigences linguistiques, mentionnez-le lors de la réservation et nous organiserons l'assistance appropriée.",
+    "accessibility_special_requests_unique_title": "Un besoin particulier ?",
+    "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
+    "accessibility_special_requests_unique_description": "Chaque voyageur est unique. Si vous avez une demande spéciale ou un besoin non couvert ci-dessus, nous serions ravis de vous lire. Contactez-nous directement à <email>contact@kaiya.taxi</email> avec les détails et nous ferons de notre mieux pour répondre à votre demande.",
+    "accessibility_special_requests_commitment": "Notre engagement est de rendre votre expérience de voyage confortable, sûre et adaptée à vos besoins."
   },
   "SignIn": {
     "meta_title": "Se connecter",

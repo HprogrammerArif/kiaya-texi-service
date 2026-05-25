@@ -140,7 +140,21 @@
     "changes_delays_waiting_time_cancellations_title": "Cancellations",
     "changes_delays_waiting_time_cancellations_description": "Cancellations 24+ hours in advance incur no charge. Cancellations within 24 hours may incur a service fee. Contact us immediately if plans change.",
     "changes_delays_waiting_time_support_title": "We're Here to Help",
-    "changes_delays_waiting_time_support_description": "Your travel plans are important to us. Whether you need to modify your booking, handle unexpected delays, or discuss payment adjustments, our support team is available to assist you with flexibility and professionalism."
+    "changes_delays_waiting_time_support_description": "Your travel plans are important to us. Whether you need to modify your booking, handle unexpected delays, or discuss payment adjustments, our support team is available to assist you with flexibility and professionalism.",
+    "accessibility_special_requests_title": "Accessibility & Special Requests",
+    "accessibility_special_requests_description": "We're committed to serving all travelers. Whether you have specific accessibility needs or special requests, we're here to accommodate you.",
+    "accessibility_special_requests_child_seats_title": "Child Seats & Child Safety",
+    "accessibility_special_requests_child_seats_description": "Child seats are available free of charge if requested in advance. Simply select your child's age group when booking and we'll have the appropriate seat ready for safe travel.",
+    "accessibility_special_requests_wheelchair_title": "Wheelchair & Mobility Support",
+    "accessibility_special_requests_wheelchair_description": "We accommodate passengers with mobility needs. Inform us when booking, and we'll arrange a suitable vehicle with appropriate access and space for your comfort and safety.",
+    "accessibility_special_requests_pet_title": "Pet Travel",
+    "accessibility_special_requests_pet_description": "Traveling with a pet? Let us know details when booking. We can arrange appropriate accommodation for your furry companion in a clean, comfortable, and well-maintained vehicle.",
+    "accessibility_special_requests_language_title": "Language Support & Assistance",
+    "accessibility_special_requests_language_description": "Our drivers speak Japanese and basic English. For complex communication needs or language requirements, mention this when booking and we'll arrange appropriate support.",
+    "accessibility_special_requests_unique_title": "Have a Unique Need?",
+    "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
+    "accessibility_special_requests_unique_description": "Every traveler is unique. If you have a special request or requirement not covered above, we'd love to hear from you. Contact us directly at <email>contact@kaiya.taxi</email> with details and we'll work our best to accommodate your request.",
+    "accessibility_special_requests_commitment": "Our commitment is to make your travel experience comfortable, safe, and tailored to your needs."
   },
   "SignIn": {
     "meta_title": "Sign in",

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialRequests';
 import { AirportPickup } from '@/components/AirportPickup';
 import { BeforeYouBook } from '@/components/BeforeYouBook';
 import { ChangesDelaysWaitingTime } from '@/components/ChangesDelaysWaitingTime';
@@ -267,6 +268,29 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const accessibilitySpecialRequestsCards = [
+    {
+      icon: 'childSeat',
+      title: t('accessibility_special_requests_child_seats_title'),
+      description: t('accessibility_special_requests_child_seats_description'),
+    },
+    {
+      icon: 'wheelchair',
+      title: t('accessibility_special_requests_wheelchair_title'),
+      description: t('accessibility_special_requests_wheelchair_description'),
+    },
+    {
+      icon: 'pet',
+      title: t('accessibility_special_requests_pet_title'),
+      description: t('accessibility_special_requests_pet_description'),
+    },
+    {
+      icon: 'language',
+      title: t('accessibility_special_requests_language_title'),
+      description: t('accessibility_special_requests_language_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -379,6 +403,27 @@ export default async function IndexPage(props: IndexPageProps) {
         supportDescription={t(
           'changes_delays_waiting_time_support_description',
         )}
+      />
+
+      <AccessibilitySpecialRequests
+        title={t('accessibility_special_requests_title')}
+        description={t('accessibility_special_requests_description')}
+        cards={accessibilitySpecialRequestsCards}
+        uniqueTitle={t('accessibility_special_requests_unique_title')}
+        uniqueDescription={t.rich(
+          'accessibility_special_requests_unique_description',
+          {
+            email: (chunks) => (
+              <a
+                href={`mailto:${t('accessibility_special_requests_contact_email')}`}
+                className="font-extrabold text-white underline underline-offset-4"
+              >
+                {chunks}
+              </a>
+            ),
+          },
+        )}
+        commitment={t('accessibility_special_requests_commitment')}
       />
     </>
   );
