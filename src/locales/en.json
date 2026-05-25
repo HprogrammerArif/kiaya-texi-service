@@ -154,7 +154,18 @@
     "accessibility_special_requests_unique_title": "Have a Unique Need?",
     "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
     "accessibility_special_requests_unique_description": "Every traveler is unique. If you have a special request or requirement not covered above, we'd love to hear from you. Contact us directly at <email>contact@kaiya.taxi</email> with details and we'll work our best to accommodate your request.",
-    "accessibility_special_requests_commitment": "Our commitment is to make your travel experience comfortable, safe, and tailored to your needs."
+    "accessibility_special_requests_commitment": "Our commitment is to make your travel experience comfortable, safe, and tailored to your needs.",
+    "safety_service_standards_title": "Safety & Service Standards",
+    "safety_service_standards_driver_title": "Professional Driver Training",
+    "safety_service_standards_driver_description": "All Kaiya drivers complete comprehensive safety training, local route expertise, and customer service certification. We prioritize professionalism and courtesy.",
+    "safety_service_standards_maintenance_title": "Vehicle Maintenance",
+    "safety_service_standards_maintenance_description": "Every vehicle in our fleet is regularly inspected, maintained, and cleaned to the highest standards. Safety systems are checked before every shift.",
+    "safety_service_standards_compliance_title": "Insurance & Legal Compliance",
+    "safety_service_standards_compliance_description": "Full commercial insurance covers all passengers and their belongings. We comply with all Japanese transportation regulations and licensing requirements.",
+    "safety_service_standards_privacy_title": "Customer Privacy & Data",
+    "safety_service_standards_privacy_description": "Your personal information is secure, confidential, and only used for booking confirmation and service delivery. We never share your data with third parties.",
+    "safety_service_standards_terms_label": "About Our Terms:",
+    "safety_service_standards_terms_description": "Kaiya operates under strict terms of service designed to ensure passenger safety, professional conduct, and fair practices. We reserve the right to terminate service to any passenger whose behavior violates our code of conduct or creates safety concerns. Full terms are available on request."
   },
   "SignIn": {
     "meta_title": "Sign in",

@@ -7,6 +7,7 @@ import { BeforeYouBook } from '@/components/BeforeYouBook';
 import { ChangesDelaysWaitingTime } from '@/components/ChangesDelaysWaitingTime';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
+import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
 import { Link } from '@/libs/I18nNavigation';
@@ -291,6 +292,29 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const safetyServiceStandardsCards = [
+    {
+      icon: 'professionalDriver',
+      title: t('safety_service_standards_driver_title'),
+      description: t('safety_service_standards_driver_description'),
+    },
+    {
+      icon: 'maintenance',
+      title: t('safety_service_standards_maintenance_title'),
+      description: t('safety_service_standards_maintenance_description'),
+    },
+    {
+      icon: 'compliance',
+      title: t('safety_service_standards_compliance_title'),
+      description: t('safety_service_standards_compliance_description'),
+    },
+    {
+      icon: 'privacy',
+      title: t('safety_service_standards_privacy_title'),
+      description: t('safety_service_standards_privacy_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -424,6 +448,13 @@ export default async function IndexPage(props: IndexPageProps) {
           },
         )}
         commitment={t('accessibility_special_requests_commitment')}
+      />
+
+      <SafetyServiceStandards
+        title={t('safety_service_standards_title')}
+        cards={safetyServiceStandardsCards}
+        termsLabel={t('safety_service_standards_terms_label')}
+        termsDescription={t('safety_service_standards_terms_description')}
       />
     </>
   );

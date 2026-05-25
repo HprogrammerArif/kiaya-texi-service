@@ -154,7 +154,18 @@
     "accessibility_special_requests_unique_title": "Un besoin particulier ?",
     "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
     "accessibility_special_requests_unique_description": "Chaque voyageur est unique. Si vous avez une demande spéciale ou un besoin non couvert ci-dessus, nous serions ravis de vous lire. Contactez-nous directement à <email>contact@kaiya.taxi</email> avec les détails et nous ferons de notre mieux pour répondre à votre demande.",
-    "accessibility_special_requests_commitment": "Notre engagement est de rendre votre expérience de voyage confortable, sûre et adaptée à vos besoins."
+    "accessibility_special_requests_commitment": "Notre engagement est de rendre votre expérience de voyage confortable, sûre et adaptée à vos besoins.",
+    "safety_service_standards_title": "Sécurité et standards de service",
+    "safety_service_standards_driver_title": "Formation des chauffeurs professionnels",
+    "safety_service_standards_driver_description": "Tous les chauffeurs Kaiya suivent une formation complète à la sécurité, développent une expertise des itinéraires locaux et obtiennent une certification en service client. Nous privilégions le professionnalisme et la courtoisie.",
+    "safety_service_standards_maintenance_title": "Entretien des véhicules",
+    "safety_service_standards_maintenance_description": "Chaque véhicule de notre flotte est régulièrement inspecté, entretenu et nettoyé selon les standards les plus élevés. Les systèmes de sécurité sont vérifiés avant chaque service.",
+    "safety_service_standards_compliance_title": "Assurance et conformité légale",
+    "safety_service_standards_compliance_description": "Une assurance commerciale complète couvre tous les passagers et leurs effets personnels. Nous respectons toutes les réglementations japonaises relatives au transport et aux licences.",
+    "safety_service_standards_privacy_title": "Confidentialité et données client",
+    "safety_service_standards_privacy_description": "Vos informations personnelles sont sécurisées, confidentielles et utilisées uniquement pour la confirmation de réservation et la prestation du service. Nous ne partageons jamais vos données avec des tiers.",
+    "safety_service_standards_terms_label": "À propos de nos conditions :",
+    "safety_service_standards_terms_description": "Kaiya opère selon des conditions de service strictes conçues pour garantir la sécurité des passagers, une conduite professionnelle et des pratiques équitables. Nous nous réservons le droit de mettre fin au service pour tout passager dont le comportement enfreint notre code de conduite ou crée des préoccupations de sécurité. Les conditions complètes sont disponibles sur demande."
   },
   "SignIn": {
     "meta_title": "Se connecter",
