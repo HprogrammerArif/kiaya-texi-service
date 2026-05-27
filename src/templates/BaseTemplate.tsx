@@ -1,12 +1,13 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-
+import Image from 'next/image';
 import { Link } from '@/libs/I18nNavigation';
 import { AppConfig } from '@/utils/AppConfig';
 
 /**
  * Root layout shell for all marketing pages.
  * Renders a sticky navbar, main content area, and footer.
+ * @param props Layout slot props: leftNav, centerNav, rightNav, and page children
+ * @returns React.ReactNode representing the full page shell
  */
 export const BaseTemplate = (props: {
   leftNav?: React.ReactNode;
@@ -37,7 +38,10 @@ export const BaseTemplate = (props: {
 
           {/* Center-side nav */}
           {props.centerNav && (
-            <nav aria-label="Center navigation" className="absolute left-1/2 -translate-x-1/2 transform">
+            <nav
+              aria-label="Center navigation"
+              className="absolute left-1/2 -translate-x-1/2 transform"
+            >
               <ul className="hidden items-center gap-6 text-sm font-medium text-gray-600 sm:flex">
                 {props.centerNav}
               </ul>
@@ -76,9 +80,7 @@ export const BaseTemplate = (props: {
                 </span>
               </div>
               {/* Description */}
-              <p className="max-w-xs text-sm leading-relaxed text-slate-400">
-                {t('about_text')}
-              </p>
+              <p className="max-w-xs text-sm leading-relaxed text-slate-400">{t('about_text')}</p>
               {/* Social Icons */}
               <div className="mt-2 flex items-center gap-3">
                 <a
@@ -142,7 +144,9 @@ export const BaseTemplate = (props: {
                     href="/#services"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_services')}
                   </Link>
                 </li>
@@ -151,7 +155,9 @@ export const BaseTemplate = (props: {
                     href="/#about"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_about')}
                   </Link>
                 </li>
@@ -160,7 +166,9 @@ export const BaseTemplate = (props: {
                     href="/#contact"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_contact')}
                   </Link>
                 </li>
@@ -178,7 +186,9 @@ export const BaseTemplate = (props: {
                     href="/privacy"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_privacy')}
                   </Link>
                 </li>
@@ -187,7 +197,9 @@ export const BaseTemplate = (props: {
                     href="/terms"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_terms')}
                   </Link>
                 </li>
@@ -196,7 +208,9 @@ export const BaseTemplate = (props: {
                     href="/disclosure"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
-                    <span className="text-slate-600 transition-colors group-hover:text-white">&gt;</span>
+                    <span className="text-slate-600 transition-colors group-hover:text-white">
+                      &gt;
+                    </span>
                     {t('link_disclosure')}
                   </Link>
                 </li>
@@ -211,7 +225,7 @@ export const BaseTemplate = (props: {
               <ul className="flex flex-col gap-3.5 text-sm text-slate-400">
                 <li className="flex items-start gap-3">
                   <svg
-                    className="mt-0.5 h-4 w-4 text-slate-500 shrink-0"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -221,13 +235,16 @@ export const BaseTemplate = (props: {
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  <a href={`tel:${t('contact_phone').replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
+                  <a
+                    href={`tel:${t('contact_phone').replaceAll(/\s+/gu, '')}`}
+                    className="transition-colors hover:text-white"
+                  >
                     {t('contact_phone')}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg
-                    className="mt-0.5 h-4 w-4 text-slate-500 shrink-0"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -238,13 +255,16 @@ export const BaseTemplate = (props: {
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
-                  <a href={`mailto:${t('contact_email')}`} className="hover:text-white transition-colors break-all">
+                  <a
+                    href={`mailto:${t('contact_email')}`}
+                    className="break-all transition-colors hover:text-white"
+                  >
                     {t('contact_email')}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg
-                    className="mt-0.5 h-4 w-4 text-slate-500 shrink-0"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -264,7 +284,9 @@ export const BaseTemplate = (props: {
           {/* Bottom border copyright bar */}
           <div className="mt-12 border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
             <span>
-              © {new Date().getFullYear()} <span className="font-semibold text-slate-400">{AppConfig.name}</span>. All rights reserved.
+              © {new Date().getFullYear()}{' '}
+              <span className="font-semibold text-slate-400">{AppConfig.name}</span>. All rights
+              reserved.
             </span>
           </div>
         </div>

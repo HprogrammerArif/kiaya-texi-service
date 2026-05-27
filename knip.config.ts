@@ -2,23 +2,27 @@ import type { KnipConfig } from 'knip';
 
 const config: KnipConfig = {
   // Files to exclude from Knip analysis
-  ignore: ['src/libs/I18n.ts', 'src/types/I18n.ts', 'src/libs/ApiClient.ts', 'src/libs/DB.ts', 'src/utils/DBConnection.ts'],
+  ignore: [
+    'src/libs/I18n.ts',
+    'src/types/I18n.ts',
+    'src/libs/ApiClient.ts',
+    'src/libs/DB.ts',
+    'src/utils/DBConnection.ts',
+  ],
   // Dependencies to ignore during analysis
   ignoreDependencies: [
     '@commitlint/types',
     '@swc/helpers', // Avoid error in CI: "`npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync."
     'vite',
     '@hookform/resolvers',
-    'lefthook',
-    'vitest-browser-react'
+    'vitest-browser-react',
   ],
   // Include custom Playwright test file suffixes
   playwright: {
     entry: ['tests/**/*.@(integ|e2e).ts'],
   },
   // Binaries to ignore during analysis
-  ignoreBinaries: [
-  ],
+  ignoreBinaries: [],
   compilers: {
     css: (text: string) => [...text.matchAll(/(?<=@)import[^;]+/gu)].join('\n'),
   },

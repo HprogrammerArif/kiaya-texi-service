@@ -29,24 +29,19 @@ type FaqSectionProps = {
  * @returns React.ReactNode representing the FAQ section
  */
 export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
-  const [selectedCategory, setSelectedCategory] =
-    React.useState<FaqCategoryId>('all');
-  const [openItemId, setOpenItemId] = React.useState<string | null>(
-    props.items[0]?.id ?? null,
-  );
+  const [selectedCategory, setSelectedCategory] = React.useState<FaqCategoryId>('all');
+  const [openItemId, setOpenItemId] = React.useState<string | null>(props.items[0]?.id ?? null);
 
-  const filteredItems = props.items.filter((item) => {
-    return selectedCategory === 'all' || item.category === selectedCategory;
-  });
+  const filteredItems = props.items.filter(
+    (item) => selectedCategory === 'all' || item.category === selectedCategory,
+  );
 
   const selectCategory = (categoryId: FaqCategoryId) => {
     setSelectedCategory(categoryId);
-
-    const nextItems = props.items.filter((item) => {
-      return categoryId === 'all' || item.category === categoryId;
-    });
-
-    setOpenItemId(nextItems[0]?.id ?? null);
+    const nextItem = props.items.find(
+      (item) => categoryId === 'all' || item.category === categoryId,
+    );
+    setOpenItemId(nextItem?.id ?? null);
   };
 
   return (
@@ -56,15 +51,14 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
             {props.title}
           </h2>
-          <p className="mt-5 text-sm font-medium leading-relaxed text-slate-500 sm:text-base">
+          <p className="mt-5 text-sm leading-relaxed font-medium text-slate-500 sm:text-base">
             {props.description}
           </p>
         </div>
 
-        <div
-          role="group"
+        <fieldset
           aria-label={props.title}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-10 flex flex-wrap items-center justify-center gap-4 border-0 p-0"
         >
           {props.categories.map((category) => {
             const isSelected = selectedCategory === category.id;
@@ -74,18 +68,20 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
                 key={category.id}
                 type="button"
                 aria-pressed={isSelected}
-                onClick={() => selectCategory(category.id)}
+                onClick={() => {
+                  selectCategory(category.id);
+                }}
                 className={
                   isSelected
-                    ? 'rounded-full bg-slate-900 px-6 py-2 text-sm font-extrabold uppercase text-white transition-colors'
-                    : 'rounded-full bg-slate-100 px-6 py-2 text-sm font-extrabold uppercase text-slate-500 transition-colors hover:bg-slate-200'
+                    ? 'rounded-full bg-slate-900 px-6 py-2 text-sm font-extrabold text-white uppercase transition-colors'
+                    : 'rounded-full bg-slate-100 px-6 py-2 text-sm font-extrabold text-slate-500 uppercase transition-colors hover:bg-slate-200'
                 }
               >
                 {category.label}
               </button>
             );
           })}
-        </div>
+        </fieldset>
 
         <div className="mt-12 grid gap-x-24 lg:grid-cols-2">
           {filteredItems.map((item) => {
@@ -97,12 +93,12 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={`${item.id}-answer`}
-                  onClick={() => setOpenItemId(isOpen ? null : item.id)}
+                  onClick={() => {
+                    setOpenItemId(isOpen ? null : item.id);
+                  }}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                 >
-                  <span className="text-base font-extrabold text-slate-800">
-                    {item.question}
-                  </span>
+                  <span className="text-base font-extrabold text-slate-800">{item.question}</span>
                   <svg
                     aria-hidden="true"
                     className={
@@ -125,7 +121,7 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
 
                 {isOpen ? (
                   <div id={`${item.id}-answer`} className="pb-8">
-                    <p className="max-w-xl text-sm font-medium leading-relaxed text-slate-500">
+                    <p className="max-w-xl text-sm leading-relaxed font-medium text-slate-500">
                       {item.answer}
                     </p>
                   </div>

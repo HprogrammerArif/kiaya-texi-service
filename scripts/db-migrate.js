@@ -1,7 +1,7 @@
-import { migrate } from 'drizzle-orm/node-postgres/migrator';
+import fs from 'node:fs';
 import { drizzle } from 'drizzle-orm/node-postgres';
-import pg from 'pg';
-import fs from 'fs';
+import { migrate } from 'drizzle-orm/node-postgres/migrator';
+import { Pool } from 'pg';
 
 // Check if database migrations directory exists
 if (!fs.existsSync('./migrations')) {
@@ -25,11 +25,14 @@ const databaseUrl = process.env.DATABASE_URL;
 
 // If we are on Vercel or in a non-TTY environment/CI, check if the database URL points to localhost/127.0.0.1.
 // If it does, we should skip migrations because the local dev server (pglite) won't be running.
-const isLocalhost = databaseUrl && (databaseUrl.includes('localhost') || databaseUrl.includes('127.0.0.1'));
+const isLocalhost =
+  databaseUrl && (databaseUrl.includes('localhost') || databaseUrl.includes('127.0.0.1'));
 const isVercel = process.env.VERCEL === '1' || !!process.env.VERCEL;
 
 if (isVercel && isLocalhost) {
-  console.log('Skipping database migration during Vercel build because DATABASE_URL points to localhost/127.0.0.1.');
+  console.log(
+    'Skipping database migration during Vercel build because DATABASE_URL points to localhost/127.0.0.1.',
+  );
   process.exit(0);
 }
 
@@ -39,7 +42,7 @@ if (!databaseUrl) {
 }
 
 console.log('Running database migrations programmatically...');
-const pool = new pg.Pool({
+const pool = new Pool({
   connectionString: databaseUrl,
 });
 
