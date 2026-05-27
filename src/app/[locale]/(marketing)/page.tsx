@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
 import { AboutKaiya } from '@/components/AboutKaiya';
 import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialRequests';
 import { AirportPickup } from '@/components/AirportPickup';
@@ -10,6 +10,7 @@ import { CoreValues } from '@/components/CoreValues';
 import { FaqSection } from '@/components/FaqSection';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
+import { JoinOurNetwork } from '@/components/JoinOurNetwork';
 import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
@@ -421,6 +422,24 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const networkPartners = [
+    {
+      icon: '/assets/icons/driver.svg',
+      title: t('join_our_network_drivers_title'),
+      description: t('join_our_network_drivers_description'),
+    },
+    {
+      icon: '/assets/icons/trPartner.svg',
+      title: t('join_our_network_travel_partners_title'),
+      description: t('join_our_network_travel_partners_description'),
+    },
+    {
+      icon: '/assets/icons/businessIcon.svg',
+      title: t('join_our_network_business_title'),
+      description: t('join_our_network_business_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -440,7 +459,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           {/* Headline */}
-          <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-tight whitespace-pre-line">
+          <h1 className="mx-auto max-w-4xl text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-white sm:text-5xl md:text-6xl lg:text-7xl">
             {t('hero_title')}
           </h1>
 
@@ -448,39 +467,39 @@ export default async function IndexPage(props: IndexPageProps) {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/#bookings"
-              className="w-full sm:w-auto rounded-xl bg-white px-8 py-3.5 text-base font-bold text-gray-900 shadow-sm transition-all hover:bg-gray-100 hover:shadow-md hover:scale-105 active:scale-95 text-center"
+              className="w-full rounded-xl bg-white px-8 py-3.5 text-center text-base font-bold text-gray-900 shadow-sm transition-all hover:scale-105 hover:bg-gray-100 hover:shadow-md active:scale-95 sm:w-auto"
             >
               {t('hero_cta_primary')}
             </Link>
             <Link
               href="/#contact"
-              className="w-full sm:w-auto rounded-xl border border-white bg-transparent px-8 py-3.5 text-base font-bold text-white shadow-sm transition-all hover:bg-white/10 hover:shadow-md hover:scale-105 active:scale-95 text-center"
+              className="w-full rounded-xl border border-white bg-transparent px-8 py-3.5 text-center text-base font-bold text-white shadow-sm transition-all hover:scale-105 hover:bg-white/10 hover:shadow-md active:scale-95 sm:w-auto"
             >
               {t('hero_cta_secondary')}
             </Link>
           </div>
 
           {/* Features Horizontal Pill Bar */}
-          <div className="mt-16 sm:mt-24 flex justify-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-2xl sm:rounded-full bg-black/30 border border-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md">
+          <div className="mt-16 flex justify-center sm:mt-24">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-2xl border border-white/10 bg-black/30 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md sm:rounded-full">
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="font-bold text-white">✓</span>
                 {t('hero_feature_1')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="font-bold text-white">✓</span>
                 {t('hero_feature_2')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="font-bold text-white">✓</span>
                 {t('hero_feature_3')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="font-bold text-white">✓</span>
                 {t('hero_feature_4')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="font-bold text-white">✓</span>
                 {t('hero_feature_5')}
               </span>
             </div>
@@ -494,10 +513,7 @@ export default async function IndexPage(props: IndexPageProps) {
       {/* ── TRAVEL OPTIONS ── */}
       <TravelOptions title={t('travel_options_title')} items={travelOptions} />
 
-      <VehicleJourney
-        title={t('vehicle_journey_title')}
-        items={vehicleJourney}
-      />
+      <VehicleJourney title={t('vehicle_journey_title')} items={vehicleJourney} />
 
       <HowItWorks
         eyebrow={t('how_it_works_eyebrow')}
@@ -530,9 +546,7 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('changes_delays_waiting_time_description')}
         cards={changesDelaysWaitingTimeCards}
         supportTitle={t('changes_delays_waiting_time_support_title')}
-        supportDescription={t(
-          'changes_delays_waiting_time_support_description',
-        )}
+        supportDescription={t('changes_delays_waiting_time_support_description')}
       />
 
       <AccessibilitySpecialRequests
@@ -540,19 +554,16 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('accessibility_special_requests_description')}
         cards={accessibilitySpecialRequestsCards}
         uniqueTitle={t('accessibility_special_requests_unique_title')}
-        uniqueDescription={t.rich(
-          'accessibility_special_requests_unique_description',
-          {
-            email: (chunks) => (
-              <a
-                href={`mailto:${t('accessibility_special_requests_contact_email')}`}
-                className="font-extrabold text-white underline underline-offset-4"
-              >
-                {chunks}
-              </a>
-            ),
-          },
-        )}
+        uniqueDescription={t.rich('accessibility_special_requests_unique_description', {
+          email: (chunks) => (
+            <a
+              href={`mailto:${t('accessibility_special_requests_contact_email')}`}
+              className="font-extrabold text-white underline underline-offset-4"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
         commitment={t('accessibility_special_requests_commitment')}
       />
 
@@ -597,6 +608,9 @@ export default async function IndexPage(props: IndexPageProps) {
           { title: t('why_choose_item_6_title'), description: t('why_choose_item_6_description') },
         ]}
       />
+
+      {/* join our network */}
+      <JoinOurNetwork title={t('join_our_network_title')} items={networkPartners} />
     </>
   );
 }
