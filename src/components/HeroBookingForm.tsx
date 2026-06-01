@@ -33,129 +33,23 @@ export function HeroBookingForm(props: HeroBookingFormProps) {
       date,
       time,
     });
-    window.location.href = `/#bookings?${params.toString()}`;
+    // Redirect user to the external booking site with the selected parameters
+    window.location.href = `https://book.kaiya.taxi/booking-form.php?${params.toString()}`;
   }
 
   return (
-    <ScrollReveal animation="up" delay={400}>
-      <div className="w-full max-w-4xl rounded-2xl bg-white px-6 py-5 shadow-2xl transition-all duration-500 hover:shadow-black/10">
-        {/* ── Tabs ── */}
-        <div className="mb-5 inline-flex rounded-full bg-gray-100 p-1">
-          <button
-            type="button"
-            id="hero-tab-transfer"
-            onClick={() => setActiveTab('transfer')}
-            className={`rounded-full px-5 py-1.5 text-sm font-semibold transition-all duration-200 ${
-              activeTab === 'transfer'
-                ? 'bg-gray-900 text-white shadow scale-105'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            {props.tabTransfer}
-          </button>
-          <button
-            type="button"
-            id="hero-tab-hourly"
-            onClick={() => setActiveTab('hourly')}
-            className={`rounded-full px-5 py-1.5 text-sm font-semibold transition-all duration-200 ${
-              activeTab === 'hourly'
-                ? 'bg-gray-900 text-white shadow scale-105'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            {props.tabHourly}
-          </button>
-        </div>
-
-        {/* ── Form ── */}
-        <form onSubmit={handleSubmit}>
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
-            {/* Pickup */}
-            <div className="flex-1">
-              <label
-                htmlFor="hero-pickup"
-                className="mb-1 block text-[11px] font-bold uppercase tracking-widest text-gray-400"
-              >
-                {props.labelPickup}
-              </label>
-              <input
-                id="hero-pickup"
-                type="text"
-                value={pickup}
-                onChange={(e) => setPickup(e.target.value)}
-                placeholder={props.placeholderLocation}
-                required
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-800 outline-none transition-colors placeholder:text-gray-400 focus:border-gray-400 focus:bg-white"
-              />
-            </div>
-
-            {/* Drop-off — only for transfer mode */}
-            {activeTab === 'transfer' && (
-              <div className="flex-1 animate-in fade-in slide-in-from-right-4 duration-300">
-                <label
-                  htmlFor="hero-dropoff"
-                  className="mb-1 block text-[11px] font-bold uppercase tracking-widest text-gray-400"
-                >
-                  {props.labelDropOff}
-                </label>
-                <input
-                  id="hero-dropoff"
-                  type="text"
-                  value={dropOff}
-                  onChange={(e) => setDropOff(e.target.value)}
-                  placeholder={props.placeholderLocation}
-                  required
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-800 outline-none transition-colors placeholder:text-gray-400 focus:border-gray-400 focus:bg-white"
-                />
-              </div>
-            )}
-
-            {/* Date */}
-            <div className="w-full lg:w-44">
-              <label
-                htmlFor="hero-date"
-                className="mb-1 block text-[11px] font-bold uppercase tracking-widest text-gray-400"
-              >
-                {props.labelDate}
-              </label>
-              <input
-                id="hero-date"
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                required
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-700 outline-none transition-colors focus:border-gray-400 focus:bg-white"
-              />
-            </div>
-
-            {/* Time */}
-            <div className="w-full lg:w-36">
-              <label
-                htmlFor="hero-time"
-                className="mb-1 block text-[11px] font-bold uppercase tracking-widest text-gray-400"
-              >
-                {props.labelTime}
-              </label>
-              <input
-                id="hero-time"
-                type="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                required
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-700 outline-none transition-colors focus:border-gray-400 focus:bg-white"
-              />
-            </div>
-
-            {/* CTA */}
-            <button
-              type="submit"
-              id="hero-get-quote"
-              className="w-full shrink-0 rounded-xl bg-gray-900 px-7 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow transition-all duration-200 hover:bg-gray-700 hover:shadow-lg active:scale-95 lg:w-auto"
-            >
-              {props.labelGetQuote}
-            </button>
-          </div>
-        </form>
+    <ScrollReveal  className="w-full max-w-6xl relative z-50">
+      {/* 
+        The wrapper has a fixed height that matches the "closed" form size. 
+        This prevents the huge empty gap from pushing down the text below. 
+      */}
+      <div className="w-full rounded-2xl bg-transparent transition-all duration-500 h-[180px] sm:h-[120px] md:h-[100px]">
+        <iframe 
+          src="https://book.kaiya.taxi/booking-form.php" 
+          className="absolute top-0 left-0 w-full h-[550px] sm:h-[450px] md:h-[450px] border-none bg-transparent"
+          title="Kaiya Booking Form"
+          scrolling="no"
+        />
       </div>
     </ScrollReveal>
   );
