@@ -17,6 +17,7 @@ import { VehicleJourney } from '@/components/VehicleJourney';
 import { WhyChooseKaiya } from '@/components/WhyChooseKaiya';
 import { HeroBookingForm } from '@/components/HeroBookingForm';
 import { ReadyToBook } from '@/components/ReadyToBook';
+import { TestimonialSlider } from '@/components/TestimonialSlider';
 
 
 type IndexPageProps = {
@@ -624,6 +625,51 @@ export default async function IndexPage(props: IndexPageProps) {
         ctaLabel={t('ready_to_book_cta')}
         ctaHref="/#bookings"
       />
+
+      {/* Why Travelers Trust Us user swipper slider review section */}
+      <TestimonialSlider
+        title={t('testimonials_title')}
+        subtitle={t('testimonials_subtitle')}
+        testimonials={[
+          {
+            name: t('testimonial_1_name'),
+            country: t('testimonial_1_country'),
+            quote: t('testimonial_1_quote'),
+            avatar: '/assets/images/avatar-sarah.png',
+          },
+          {
+            name: t('testimonial_2_name'),
+            country: t('testimonial_2_country'),
+            quote: t('testimonial_2_quote'),
+            avatar: '/assets/images/avatar-james.png',
+          },
+          {
+            name: t('testimonial_3_name'),
+            country: t('testimonial_3_country'),
+            quote: t('testimonial_3_quote'),
+            avatar: '/assets/images/avatar-yuki.png',
+          },
+          {
+            name: t('testimonial_4_name'),
+            country: t('testimonial_4_country'),
+            quote: t('testimonial_4_quote'),
+            avatar: '/assets/images/avatar-james.png',
+          },
+          {
+            name: t('testimonial_5_name'),
+            country: t('testimonial_5_country'),
+            quote: t('testimonial_5_quote'),
+            avatar: '/assets/images/avatar-sarah.png',
+          },
+          {
+            name: t('testimonial_6_name'),
+            country: t('testimonial_6_country'),
+            quote: t('testimonial_6_quote'),
+            avatar: '/assets/images/avatar-james.png',
+          },
+        ]}
+      />
+
     </>
   );
 }
