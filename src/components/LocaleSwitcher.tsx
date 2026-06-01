@@ -23,7 +23,7 @@ export const LocaleSwitcher = () => {
   };
 
   return (
-    <div className="relative flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/50 px-3.5 py-2 text-xs font-bold text-slate-700 hover:border-slate-300 hover:bg-slate-100/50 hover:text-slate-900 transition-all cursor-pointer">
+    <div className="relative flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/50 px-3.5 py-2 text-xs font-bold text-slate-700 transition-all hover:border-slate-300 hover:bg-slate-100/50 hover:text-slate-900">
       {/* Left Chevron Down */}
       <svg
         className="h-3 w-3 text-slate-500 transition-transform group-hover:translate-y-0.5"
@@ -51,13 +51,13 @@ export const LocaleSwitcher = () => {
       </svg>
 
       {/* Locale text */}
-      <span className="uppercase tracking-wide">{locale}</span>
+      <span className="tracking-wide uppercase">{locale}</span>
 
       {/* Invisible native select overlay */}
       <select
         defaultValue={locale}
         onChange={handleChange}
-        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
         aria-label={t('change_language')}
       >
         {routing.locales.map((elt) => (

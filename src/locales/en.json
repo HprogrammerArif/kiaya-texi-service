@@ -226,7 +226,14 @@
     "why_choose_item_6_title": "Tailored Solutions",
     "why_choose_item_6_description": "Custom arrangements for your unique travel requirements and preferences",
     "why_choose_image_1_alt": "Kaiya professional driver opening a premium vehicle door",
-    "why_choose_image_2_alt": "Kaiya driver ready to assist passengers with luggage"
+    "why_choose_image_2_alt": "Kaiya driver ready to assist passengers with luggage",
+    "join_our_network_title": "Join Our Network",
+    "join_our_network_drivers_title": "For Drivers",
+    "join_our_network_drivers_description": "Join our team of professional drivers and enjoy flexible work with premium compensation. We value professionalism, safety, and customer service.",
+    "join_our_network_travel_partners_title": "For Travel Partners",
+    "join_our_network_travel_partners_description": "Hotels, travel agencies, and tour operators can partner with Kaiya for seamless ground transportation solutions for your clients.",
+    "join_our_network_business_title": "For Business Collaborators",
+    "join_our_network_business_description": "Corporate clients and logistics partners benefit from our reliable, professional transportation services tailored to business needs."
   },
   "SignIn": {
     "meta_title": "Sign in",

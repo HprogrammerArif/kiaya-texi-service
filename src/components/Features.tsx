@@ -32,34 +32,29 @@ export const Features = (props: FeaturesProps): React.ReactNode => {
           </p>
         </div>
 
-        {/* Feature cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {props.items.map((feature) => (
-            <div
-              key={feature.title}
-              className="group rounded-2xl bg-[#FFFFFF] p-6 shadow-sm border border-slate-100/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 flex flex-col items-start text-left"
-            >
-              {/* Icon */}
-              <div className="mb-5 flex size-12 items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                <Image
-                  src={feature.icon}
-                  alt={feature.title}
-                  width={48}
-                  height={48}
-                  className="size-12 object-contain"
-                />
-              </div>
-
-              <h3 className="mb-2 text-lg font-bold text-slate-900">
-                {feature.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-slate-500">
-                {feature.description}
-              </p>
+      {/* Feature cards */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {props.items.map((feature) => (
+          <div
+            key={feature.title}
+            className="group flex flex-col items-start rounded-2xl border border-slate-100/80 bg-[#FFFFFF] p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            {/* Icon */}
+            <div className="mb-5 flex size-12 items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <Image
+                src={feature.icon}
+                alt={feature.title}
+                width={48}
+                height={48}
+                className="size-12 object-contain"
+              />
             </div>
-          ))}
-        </div>
+
+            <h3 className="mb-2 text-lg font-bold text-slate-900">{feature.title}</h3>
+            <p className="text-sm leading-relaxed text-slate-500">{feature.description}</p>
+          </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);}

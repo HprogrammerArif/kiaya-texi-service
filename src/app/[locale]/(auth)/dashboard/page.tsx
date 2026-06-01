@@ -9,9 +9,7 @@ export default async function DashboardPage(props: { params: Promise<{ locale: s
 
   return (
     <div className="[&_p]:my-6">
-      <h1 className="text-2xl font-bold">
-        {t('hello_message', { email: user?.email ?? 'User' })}
-      </h1>
+      <h1 className="text-2xl font-bold">{t('hello_message', { email: user?.email ?? 'User' })}</h1>
       <p className="text-gray-600">{t('alternative_message')}</p>
     </div>
   );

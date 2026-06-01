@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
 import { AboutKaiya } from '@/components/AboutKaiya';
 import { AccessibilitySpecialRequests } from '@/components/AccessibilitySpecialRequests';
 import { AirportPickup } from '@/components/AirportPickup';
@@ -10,6 +10,7 @@ import { CoreValues } from '@/components/CoreValues';
 import { FaqSection } from '@/components/FaqSection';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
+import { JoinOurNetwork } from '@/components/JoinOurNetwork';
 import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
@@ -422,6 +423,24 @@ export default async function IndexPage(props: IndexPageProps) {
     },
   ] as const;
 
+  const networkPartners = [
+    {
+      icon: '/assets/icons/driver.svg',
+      title: t('join_our_network_drivers_title'),
+      description: t('join_our_network_drivers_description'),
+    },
+    {
+      icon: '/assets/icons/trPartner.svg',
+      title: t('join_our_network_travel_partners_title'),
+      description: t('join_our_network_travel_partners_description'),
+    },
+    {
+      icon: '/assets/icons/businessIcon.svg',
+      title: t('join_our_network_business_title'),
+      description: t('join_our_network_business_description'),
+    },
+  ] as const;
+
   return (
     <>
       {/* ── Hero ── */}
@@ -498,10 +517,7 @@ export default async function IndexPage(props: IndexPageProps) {
       {/* ── TRAVEL OPTIONS ── */}
       <TravelOptions title={t('travel_options_title')} items={travelOptions} />
 
-      <VehicleJourney
-        title={t('vehicle_journey_title')}
-        items={vehicleJourney}
-      />
+      <VehicleJourney title={t('vehicle_journey_title')} items={vehicleJourney} />
 
       <HowItWorks
         eyebrow={t('how_it_works_eyebrow')}
@@ -534,9 +550,7 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('changes_delays_waiting_time_description')}
         cards={changesDelaysWaitingTimeCards}
         supportTitle={t('changes_delays_waiting_time_support_title')}
-        supportDescription={t(
-          'changes_delays_waiting_time_support_description',
-        )}
+        supportDescription={t('changes_delays_waiting_time_support_description')}
       />
 
       <AccessibilitySpecialRequests
@@ -544,19 +558,16 @@ export default async function IndexPage(props: IndexPageProps) {
         description={t('accessibility_special_requests_description')}
         cards={accessibilitySpecialRequestsCards}
         uniqueTitle={t('accessibility_special_requests_unique_title')}
-        uniqueDescription={t.rich(
-          'accessibility_special_requests_unique_description',
-          {
-            email: (chunks) => (
-              <a
-                href={`mailto:${t('accessibility_special_requests_contact_email')}`}
-                className="font-extrabold text-white underline underline-offset-4"
-              >
-                {chunks}
-              </a>
-            ),
-          },
-        )}
+        uniqueDescription={t.rich('accessibility_special_requests_unique_description', {
+          email: (chunks) => (
+            <a
+              href={`mailto:${t('accessibility_special_requests_contact_email')}`}
+              className="font-extrabold text-white underline underline-offset-4"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
         commitment={t('accessibility_special_requests_commitment')}
       />
 
@@ -601,6 +612,9 @@ export default async function IndexPage(props: IndexPageProps) {
           { title: t('why_choose_item_6_title'), description: t('why_choose_item_6_description') },
         ]}
       />
+
+      {/* join our network */}
+      <JoinOurNetwork title={t('join_our_network_title')} items={networkPartners} />
     </>
   );
 }
