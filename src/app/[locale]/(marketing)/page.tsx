@@ -14,7 +14,8 @@ import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
 import { WhyChooseKaiya } from '@/components/WhyChooseKaiya';
-import { Link } from '@/libs/I18nNavigation';
+import { HeroBookingForm } from '@/components/HeroBookingForm';
+
 
 type IndexPageProps = {
   params: Promise<{ locale: string }>;
@@ -424,8 +425,8 @@ export default async function IndexPage(props: IndexPageProps) {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden py-24 sm:py-32">
-        {/* Background Image Container */}
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden py-20 sm:py-28">
+        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/assets/images/bacggroundOverlayImage.jpg"
@@ -434,59 +435,62 @@ export default async function IndexPage(props: IndexPageProps) {
             priority
             className="object-cover object-center"
           />
-          {/* Dark overlay to ensure high contrast and readability */}
-          <div className="absolute inset-0 bg-black/60 sm:bg-black/55" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Headline */}
-          <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-tight whitespace-pre-line">
+          <h1 className="mb-10 text-center text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl leading-tight">
             {t('hero_title')}
           </h1>
 
-          {/* CTAs */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/#bookings"
-              className="w-full sm:w-auto rounded-xl bg-white px-8 py-3.5 text-base font-bold text-gray-900 shadow-sm transition-all hover:bg-gray-100 hover:shadow-md hover:scale-105 active:scale-95 text-center"
-            >
-              {t('hero_cta_primary')}
-            </Link>
-            <Link
-              href="/#contact"
-              className="w-full sm:w-auto rounded-xl border border-white bg-transparent px-8 py-3.5 text-base font-bold text-white shadow-sm transition-all hover:bg-white/10 hover:shadow-md hover:scale-105 active:scale-95 text-center"
-            >
-              {t('hero_cta_secondary')}
-            </Link>
+          {/* Booking Widget */}
+          <div className="flex justify-center">
+            <HeroBookingForm
+              tabTransfer={t('hero_tab_transfer')}
+              tabHourly={t('hero_tab_hourly')}
+              labelPickup={t('hero_label_pickup')}
+              labelDropOff={t('hero_label_dropoff')}
+              labelDate={t('hero_label_date')}
+              labelTime={t('hero_label_time')}
+              labelGetQuote={t('hero_label_get_quote')}
+              placeholderLocation={t('hero_placeholder_location')}
+            />
           </div>
 
-          {/* Features Horizontal Pill Bar */}
-          <div className="mt-16 sm:mt-24 flex justify-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-2xl sm:rounded-full bg-black/30 border border-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md">
+          {/* Subtext */}
+          <p className="mt-8 text-center text-sm text-white/80 sm:text-base">
+            {t('hero_subtext')}
+          </p>
+
+          {/* Features Pill Bar */}
+          <div className="mt-6 flex justify-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 rounded-full border border-white/20 bg-black/30 px-6 py-3 text-sm font-medium text-white backdrop-blur-md">
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="text-white/70">✓</span>
                 {t('hero_feature_1')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="text-white/70">✓</span>
                 {t('hero_feature_2')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="text-white/70">✓</span>
                 {t('hero_feature_3')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="text-white/70">✓</span>
                 {t('hero_feature_4')}
               </span>
               <span className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-white font-bold">✓</span>
+                <span className="text-white/70">✓</span>
                 {t('hero_feature_5')}
               </span>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* ── Features ── */}
       <Features title={t('features_title')} items={features} />
