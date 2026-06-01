@@ -1,3 +1,4 @@
+import { ReadyToBook } from '@/components/ReadyToBook';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
@@ -131,28 +132,14 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* ── Help / Contact CTA ── */}
-      <section className="mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-16 text-center shadow-2xl sm:px-12">
-          {/* Subtle background glow effect */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/5 blur-3xl rounded-full pointer-events-none" />
-          
-          <div className="relative z-10">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">{t('cta_title')}</h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
-              {t('cta_desc')}
-            </p>
-            <div className="mt-8 flex justify-center">
-              <a
-                href="/#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-bold tracking-wide text-slate-950 shadow-md transition-all duration-200 hover:bg-slate-100 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
-              >
-                {t('cta_button')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+       <ReadyToBook
+              title={t('cta_title')}
+              description={t('cta_desc')}
+              ctaLabel={t('cta_button')}
+              ctaHref="https://book.kaiya.taxi/"
+            />
+
+      
     </div>
   );
 }
