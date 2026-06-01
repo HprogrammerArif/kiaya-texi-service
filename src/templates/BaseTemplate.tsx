@@ -210,7 +210,7 @@ export const BaseTemplate = (props: {
                 </li>
                 <li>
                   <Link
-                    href="/#disclosure"
+                    href="/disclosure"
                     className="group flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
                   >
                     <span className="text-slate-600 transition-colors group-hover:text-white">
