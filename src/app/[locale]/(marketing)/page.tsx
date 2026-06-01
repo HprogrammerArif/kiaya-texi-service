@@ -16,6 +16,7 @@ import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
 import { WhyChooseKaiya } from '@/components/WhyChooseKaiya';
 import { HeroBookingForm } from '@/components/HeroBookingForm';
+import { ReadyToBook } from '@/components/ReadyToBook';
 
 
 type IndexPageProps = {
@@ -616,6 +617,13 @@ export default async function IndexPage(props: IndexPageProps) {
 
       {/* join our network */}
       <JoinOurNetwork title={t('join_our_network_title')} description={t('join_our_network_description')} items={networkPartners} />
+      {/* READY TO BOOK */}
+      <ReadyToBook
+        title={t('ready_to_book_title')}
+        description={t('ready_to_book_description')}
+        ctaLabel={t('ready_to_book_cta')}
+        ctaHref="/#bookings"
+      />
     </>
   );
 }

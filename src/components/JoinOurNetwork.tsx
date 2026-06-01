@@ -19,7 +19,7 @@ type JoinOurNetworkProps = {
  * @returns React.ReactNode representing the join-our-network section
  */
 export const JoinOurNetwork = (props: JoinOurNetworkProps): React.ReactNode => (
-  <section className="bg-white py-20 sm:py-28">
+  <section className="bg-white py-16 sm:py-20">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* Section heading */}
       <div className="mb-12 text-center">

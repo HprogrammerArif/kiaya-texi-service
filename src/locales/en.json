@@ -237,7 +237,21 @@
     "join_our_network_travel_partners_title": "For Travel Partners",
     "join_our_network_travel_partners_description": "Hotels, travel agencies, and tour operators can partner with Kaiya for seamless ground transportation solutions for your clients.",
     "join_our_network_business_title": "For Business Collaborators",
-    "join_our_network_business_description": "Corporate clients and logistics partners benefit from our reliable, professional transportation services tailored to business needs."
+    "join_our_network_business_description": "Corporate clients and logistics partners benefit from our reliable, professional transportation services tailored to business needs.",
+    "ready_to_book_title": "Ready to Book",
+    "ready_to_book_description": "Start your journey with a simple booking process.",
+    "ready_to_book_cta": "Book Transfer",
+    "testimonials_title": "Why Travelers Trust Us",
+    "testimonials_subtitle": "Discover what our customers say about their experience",
+    "testimonial_1_name": "Sarah Johnson",
+    "testimonial_1_country": "United States",
+    "testimonial_1_quote": "\"Excellent service from start to finish. Our driver was punctual, professional, and made our trip from the airport so comfortable.\"",
+    "testimonial_2_name": "James Müller",
+    "testimonial_2_country": "Germany",
+    "testimonial_2_quote": "\"Incredibly smooth experience. Booking was simple, the vehicle was immaculate, and our driver knew exactly how to make us feel at ease.\"",
+    "testimonial_3_name": "Yuki Tanaka",
+    "testimonial_3_country": "Japan",
+    "testimonial_3_quote": "\"Truly premium service. From the moment we landed, everything was taken care of. I will always choose Kaiya for travel in Hokkaido.\""
   },
   "SignIn": {
     "meta_title": "Sign in",
