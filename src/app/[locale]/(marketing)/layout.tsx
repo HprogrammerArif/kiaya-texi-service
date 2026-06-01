@@ -38,7 +38,9 @@ export default async function Layout(props: {
 
           <li>
             <Link
-              href="/#bookings"
+              href="https://book.kaiya.taxi/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative inline-block py-1.5 text-sm font-semibold text-slate-600 transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-slate-900 after:transition-transform after:duration-300 after:ease-out hover:text-slate-900 hover:after:scale-x-100"
             >
               {t('bookings_link')}
