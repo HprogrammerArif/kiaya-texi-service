@@ -76,15 +76,13 @@ export const BaseTemplate = (props: {
               {/* Logo */}
               <div className="flex items-center gap-3">
                 <Image
-                  src="/assets/icons/kaiyalogo.svg"
+                  src="/assets/logo/kaiyaLogoWhite.svg"
                   alt="Kiaya Taxi Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-xl shadow-xs"
+                  width={150}
+                  height={35}
+                 
                 />
-                <span className="text-xl font-bold tracking-tight text-white lowercase">
-                  kiaya taxi
-                </span>
+                
               </div>
               {/* Description */}
               <p className="max-w-xs text-sm leading-relaxed text-slate-400">{t('about_text')}</p>
