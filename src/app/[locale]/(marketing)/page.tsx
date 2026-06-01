@@ -617,15 +617,7 @@ export default async function IndexPage(props: IndexPageProps) {
         ]}
       />
 
-      {/* join our network */}
-      <JoinOurNetwork title={t('join_our_network_title')} description={t('join_our_network_description')} items={networkPartners} />
-      {/* READY TO BOOK */}
-      <ReadyToBook
-        title={t('ready_to_book_title')}
-        description={t('ready_to_book_description')}
-        ctaLabel={t('ready_to_book_cta')}
-        ctaHref="/#bookings"
-      />
+   
 
       {/* Why Travelers Trust Us user swipper slider review section */}
       <TestimonialSlider
@@ -691,6 +683,16 @@ export default async function IndexPage(props: IndexPageProps) {
         }}
       />
       
+
+         {/* join our network */}
+      <JoinOurNetwork title={t('join_our_network_title')} description={t('join_our_network_description')} items={networkPartners} />
+      {/* READY TO BOOK */}
+      <ReadyToBook
+        title={t('ready_to_book_title')}
+        description={t('ready_to_book_description')}
+        ctaLabel={t('ready_to_book_cta')}
+        ctaHref="/#bookings"
+      />
 
     </>
   );

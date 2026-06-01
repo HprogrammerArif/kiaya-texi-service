@@ -55,7 +55,7 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
 
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
