@@ -615,7 +615,7 @@ export default async function IndexPage(props: IndexPageProps) {
       />
 
       {/* join our network */}
-      <JoinOurNetwork title={t('join_our_network_title')} items={networkPartners} />
+      <JoinOurNetwork title={t('join_our_network_title')} description={t('join_our_network_description')} items={networkPartners} />
     </>
   );
 }
