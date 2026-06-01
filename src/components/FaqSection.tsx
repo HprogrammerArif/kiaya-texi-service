@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import * as React from 'react';
 
 type FaqCategoryId = 'all' | 'booking' | 'airport' | 'policy' | 'service';
@@ -24,7 +23,7 @@ type FaqSectionProps = {
   items: readonly FaqItem[];
 };
 
-/** Emoji icons for each category tab pill. */
+/** Emoji used in both the category filter pills and the FAQ row icons. */
 const CATEGORY_EMOJI: Record<FaqCategoryId, string> = {
   all: '⭐',
   booking: '📋',
@@ -33,16 +32,8 @@ const CATEGORY_EMOJI: Record<FaqCategoryId, string> = {
   service: '💳',
 };
 
-/** SVG asset icon shown beside each FAQ row question. */
-const CATEGORY_ICON: Record<Exclude<FaqCategoryId, 'all'>, string> = {
-  booking: '/assets/icons/hotelIcon.svg',
-  airport: '/assets/icons/planeIcon.svg',
-  policy: '/assets/icons/okIcon.svg',
-  service: '/assets/icons/stopwatch.svg',
-};
-
 /**
- * Renders filterable FAQ accordion content with category icons.
+ * Renders filterable FAQ accordion content with colorful emoji icons.
  * @param props FAQ heading, categories, and questions
  * @returns React.ReactNode representing the FAQ section
  */
@@ -75,7 +66,7 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
           </p>
         </div>
 
-        {/* Category filter pills with emoji icons */}
+        {/* Category filter pills */}
         <fieldset
           aria-label={props.title}
           className="mt-10 flex flex-wrap items-center justify-center gap-3 border-0 p-0"
@@ -107,12 +98,11 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
         <div className="mt-10 grid gap-3 lg:grid-cols-2">
           {filteredItems.map((item) => {
             const isOpen = openItemId === item.id;
-            const iconSrc = CATEGORY_ICON[item.category];
 
             return (
               <article
                 key={item.id}
-                className="overflow-hidden rounded-xl border border-slate-200 bg-white"
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
               >
                 <button
                   type="button"
@@ -121,23 +111,19 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
                   onClick={() => setOpenItemId(isOpen ? null : item.id)}
                   className="flex w-full items-center gap-3 px-5 py-4 text-left"
                 >
-                  {/* Category icon */}
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-slate-900">
-                    <Image
-                      src={iconSrc}
-                      alt=""
-                      width={18}
-                      height={18}
-                      aria-hidden="true"
-                      className="size-[18px] object-contain brightness-0 invert"
-                    />
+                  {/* Colorful emoji icon — no wrapper box */}
+                  <span
+                    aria-hidden="true"
+                    className="shrink-0 text-2xl leading-none"
+                  >
+                    {CATEGORY_EMOJI[item.category]}
                   </span>
 
                   <span className="flex-1 text-sm font-bold text-slate-800">
                     {item.question}
                   </span>
 
-                  {/* Solid triangle chevron matching reference image */}
+                  {/* Solid ▼ triangle */}
                   <span
                     aria-hidden="true"
                     className={`shrink-0 text-[10px] leading-none text-slate-700 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
@@ -147,7 +133,7 @@ export const FaqSection = (props: FaqSectionProps): React.ReactNode => {
                 </button>
 
                 {isOpen && (
-                  <div id={`${item.id}-answer`} className="px-5 pb-5 pt-1">
+                  <div id={`${item.id}-answer`} className="px-5 pb-5 pt-0">
                     <p className="text-sm leading-relaxed text-slate-500">{item.answer}</p>
                   </div>
                 )}
