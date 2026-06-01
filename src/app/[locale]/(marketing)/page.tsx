@@ -18,6 +18,7 @@ import { WhyChooseKaiya } from '@/components/WhyChooseKaiya';
 import { HeroBookingForm } from '@/components/HeroBookingForm';
 import { ReadyToBook } from '@/components/ReadyToBook';
 import { TestimonialSlider } from '@/components/TestimonialSlider';
+import { ContactAndSupport } from '@/components/ContactAndSupport';
 
 
 type IndexPageProps = {
@@ -669,6 +670,27 @@ export default async function IndexPage(props: IndexPageProps) {
           },
         ]}
       />
+
+
+      {/* Contact & Support */}
+      <ContactAndSupport
+        title={t('contact_support_title')}
+        description={t('contact_support_description')}
+        phone={{ label: t('contact_support_phone_label'), value: t('contact_support_phone_value') }}
+        email={{ label: t('contact_support_email_label'), value: t('contact_support_email_value') }}
+        location={{ label: t('contact_support_location_label'), value: t('contact_support_location_value') }}
+        footerText={t('contact_support_footer')}
+        form={{
+          nameLabel: t('contact_support_form_name_label'),
+          namePlaceholder: t('contact_support_form_name_placeholder'),
+          emailLabel: t('contact_support_form_email_label'),
+          emailPlaceholder: t('contact_support_form_email_placeholder'),
+          messageLabel: t('contact_support_form_message_label'),
+          messagePlaceholder: t('contact_support_form_message_placeholder'),
+          submitText: t('contact_support_form_submit'),
+        }}
+      />
+      
 
     </>
   );
