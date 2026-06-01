@@ -15,7 +15,7 @@ type AboutKaiyaProps = {
  * @returns React.ReactNode representing the About Kaiya section
  */
 export const AboutKaiya = (props: AboutKaiyaProps): React.ReactNode => (
-  <section className="bg-white py-16 sm:py-24">
+  <section id="about" className="bg-white py-16 sm:py-24">
     <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8">
       {/* Text — slides in from left */}
       <ScrollReveal animation="left">

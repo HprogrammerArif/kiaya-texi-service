@@ -447,7 +447,7 @@ export default async function IndexPage(props: IndexPageProps) {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden py-20 sm:py-28">
+      <section id="bookings" className="relative flex min-h-[85vh] items-center justify-center overflow-hidden py-20 sm:py-28">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
