@@ -9,6 +9,7 @@ type FeatureItem = {
 
 type FeaturesProps = {
   title: string;
+  description: string;
   items: readonly FeatureItem[];
 };
 
@@ -26,6 +27,9 @@ export const Features = (props: FeaturesProps): React.ReactNode => {
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             {props.title}
           </h2>
+          <p className="mt-4 text-md text-slate-600">
+            {props.description}
+          </p>
         </div>
 
         {/* Feature cards */}

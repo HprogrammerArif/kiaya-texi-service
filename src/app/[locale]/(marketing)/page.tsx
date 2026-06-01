@@ -493,7 +493,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
 
       {/* ── Features ── */}
-      <Features title={t('features_title')} items={features} />
+      <Features title={t('features_title')} description={t('features_body_text')} items={features} />
 
       {/* ── TRAVEL OPTIONS ── */}
       <TravelOptions title={t('travel_options_title')} items={travelOptions} />
