@@ -4,18 +4,18 @@ import Image from 'next/image';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
-  const t = await getTranslations({ locale, namespace: 'TermsAndConditions' });
+  const t = await getTranslations({ locale, namespace: 'PrivacyPolicy' });
   return {
     title: t('meta_title'),
     description: t('meta_description'),
   };
 }
 
-export default async function TermsPage(props: { params: Promise<{ locale: string }> }) {
+export default async function PrivacyPage(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
-  const t = await getTranslations('TermsAndConditions');
+  const t = await getTranslations('PrivacyPolicy');
 
   return (
     <div className="bg-white">
@@ -24,7 +24,7 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
         <div className="absolute inset-0">
           <Image
             src="/assets/images/termsimage.jpg"
-            alt="Terms & Conditions Background"
+            alt="Privacy Policy Background"
             fill
             priority
             className="object-cover object-center"
@@ -53,37 +53,55 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_2_title')}</h2>
             <p>{t('section_2_desc_1')}</p>
-            <p>{t('section_2_desc_2')}</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>{t('section_2_li_1')}</li>
+              <li>{t('section_2_li_2')}</li>
+              <li>{t('section_2_li_3')}</li>
+              <li>{t('section_2_li_4')}</li>
+              <li>{t('section_2_li_5')}</li>
+            </ul>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_3_title')}</h2>
             <p>{t('section_3_desc_1')}</p>
-            <p>{t('section_3_desc_2')}</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>{t('section_3_li_1')}</li>
+              <li>{t('section_3_li_2')}</li>
+              <li>{t('section_3_li_3')}</li>
+              <li>{t('section_3_li_4')}</li>
+              <li>{t('section_3_li_5')}</li>
+              <li>{t('section_3_li_6')}</li>
+              <li>{t('section_3_li_7')}</li>
+              <li>{t('section_3_li_8')}</li>
+            </ul>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_4_title')}</h2>
-            <p>{t('section_4_desc_1')}</p>
-            <p>{t('section_4_desc_2')}</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>{t('section_4_li_1')}</li>
+              <li>{t('section_4_li_2')}</li>
+              <li>{t('section_4_li_3')}</li>
+            </ul>
+            <p className="pt-2">{t('section_4_desc_1')}</p>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_5_title')}</h2>
             <p>{t('section_5_desc_1')}</p>
-            <ul className="list-inside list-disc space-y-2 pl-4">
-              <li>{t('section_5_li_1')}</li>
-              <li>{t('section_5_li_2')}</li>
-              <li>{t('section_5_li_3')}</li>
-              <li>{t('section_5_li_4')}</li>
-              <li>{t('section_5_li_5')}</li>
-            </ul>
-            <p className="pt-2">{t('section_5_desc_2')}</p>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_6_title')}</h2>
             <p>{t('section_6_desc_1')}</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>{t('section_6_li_1')}</li>
+              <li>{t('section_6_li_2')}</li>
+              <li>{t('section_6_li_3')}</li>
+              <li>{t('section_6_li_4')}</li>
+            </ul>
+            <p className="pt-2">{t('section_6_desc_2')}</p>
           </div>
 
           <div className="space-y-3">
@@ -93,13 +111,22 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
               <li>{t('section_7_li_1')}</li>
               <li>{t('section_7_li_2')}</li>
               <li>{t('section_7_li_3')}</li>
+              <li>{t('section_7_li_4')}</li>
             </ul>
+            <p className="pt-2">{t('section_7_desc_2')}</p>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_8_title')}</h2>
             <p>{t('section_8_desc_1')}</p>
-            <p>{t('section_8_desc_2')}</p>
+            <ul className="list-inside list-disc space-y-2 pl-4">
+              <li>{t('section_8_li_1')}</li>
+              <li>{t('section_8_li_2')}</li>
+              <li>{t('section_8_li_3')}</li>
+              <li>{t('section_8_li_4')}</li>
+              <li>{t('section_8_li_5')}</li>
+            </ul>
+            <p className="pt-2">{t('section_8_desc_2')}</p>
           </div>
 
           <div className="space-y-3">
@@ -110,36 +137,40 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_10_title')}</h2>
             <p>{t('section_10_desc_1')}</p>
-            <div className="rounded-xl bg-slate-50 p-6 shadow-sm border border-slate-100 mt-4 text-slate-700">
-              <p className="font-semibold text-slate-900">{t('section_10_company')}</p>
-              <p>{t('section_10_address')}</p>
-              <p className="mt-2">{t('section_10_email')}<a href="mailto:contact@kaiya.taxi" className="text-blue-600 hover:underline">contact@kaiya.taxi</a></p>
-              <p>{t('section_10_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
-            </div>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_11_title')}</h2>
             <p>{t('section_11_desc_1')}</p>
+            <div className="rounded-xl bg-slate-50 p-6 shadow-sm border border-slate-100 mt-4 text-slate-700">
+              <p className="font-semibold text-slate-900">{t('section_11_company')}</p>
+              <p>{t('section_11_address')}</p>
+              <p className="mt-2">{t('section_11_email')}<a href="mailto:contact@kaiya.taxi" className="text-blue-600 hover:underline">contact@kaiya.taxi</a></p>
+              <p>{t('section_11_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{t('section_12_title')}</h2>
+            <p>{t('section_12_desc_1')}</p>
             <div className="mt-6 rounded-lg bg-slate-100 p-4 text-sm text-slate-600 font-medium">
-              {t('section_11_last_updated')}
+              {t('section_12_last_updated')}
             </div>
             <p className="pt-4 text-sm text-slate-500">
-              {t('section_11_desc_2')}
+              {t('section_12_desc_2')}
             </p>
           </div>
 
         </div>
       </section>
 
-       <ReadyToBook
-              title={t('cta_title')}
-              description={t('cta_desc')}
-              ctaLabel={t('cta_button')}
-              ctaHref="/#contact"
-            />
-
-      
+      {/* ── Help / Contact CTA ── */}
+      <ReadyToBook
+        title={t('cta_title')}
+        description={t('cta_desc')}
+        ctaLabel={t('cta_button')}
+         ctaHref="/#contact"
+      />
     </div>
   );
 }
