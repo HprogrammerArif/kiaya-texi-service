@@ -28,7 +28,7 @@ export const TravelOptions = (props: TravelOptionsProps): React.ReactNode => (
           {props.title}
         </h2>
         {props.description && (
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-500 sm:text-base">
             {props.description}
           </p>
         )}

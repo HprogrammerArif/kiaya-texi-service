@@ -12,6 +12,7 @@ type VehicleJourneyItem = {
 
 type VehicleJourneyProps = {
   title: string;
+  description?: string;
   items: readonly VehicleJourneyItem[];
 };
 
@@ -27,6 +28,11 @@ export const VehicleJourney = (props: VehicleJourneyProps): React.ReactNode => (
         <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           {props.title}
         </h2>
+        {props.description && (
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-500 sm:text-base">
+            {props.description}
+          </p>
+        )}
       </div>
 
       <div className="space-y-12 sm:space-y-14">
