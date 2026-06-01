@@ -573,6 +573,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
       <SafetyServiceStandards
         title={t('safety_service_standards_title')}
+        description={t('safety_service_standards_description')}
         cards={safetyServiceStandardsCards}
         termsLabel={t('safety_service_standards_terms_label')}
         termsDescription={t('safety_service_standards_terms_description')}

@@ -15,6 +15,7 @@ type SafetyServiceStandardsCard = {
 
 type SafetyServiceStandardsProps = {
   title: string;
+  description?: string;
   cards: readonly SafetyServiceStandardsCard[];
   termsLabel: string;
   termsDescription: string;
@@ -35,10 +36,15 @@ const safetyServiceStandardsIcons: Record<SafetyServiceStandardsIconName, string
 export const SafetyServiceStandards = (props: SafetyServiceStandardsProps): React.ReactNode => (
   <section className="bg-[#F5F5F5] py-16 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
+      <div className="mb-14 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
           {props.title}
         </h2>
+        {props.description && (
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+            {props.description}
+          </p>
+        )}
       </div>
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
