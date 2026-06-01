@@ -10,56 +10,64 @@ type OptionCard = {
 
 type TravelOptionsProps = {
   title: string;
+  description?: string;
   items: readonly OptionCard[];
 };
 
 /**
- * Renders a grid of travel options with detailed descriptions and checkmarks.
- * @param props TravelOptionsProps containing the title and option cards
+ * Renders a 2-column grid of travel option cards matching the reference UI.
+ * @param props TravelOptionsProps containing the section title, optional description, and option cards
  * @returns React.ReactNode representing the Travel Options section
  */
 export const TravelOptions = (props: TravelOptionsProps): React.ReactNode => (
   <section className="bg-white py-16 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      {/* Section title */}
-      <div className="mb-4 pl-8 text-left">
+      {/* Section header — centered */}
+      <div className="mb-12 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           {props.title}
         </h2>
+        {props.description && (
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+            {props.description}
+          </p>
+        )}
       </div>
 
-      {/* Travel Options Grid */}
-      <div className="grid gap-6 md:grid-cols-2">
+      {/* 2-column card grid — 4 individual cards */}
+      <div className="grid gap-6 sm:grid-cols-2">
         {props.items.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col justify-between rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] sm:p-9"
+            className="flex flex-col rounded-2xl border border-slate-200 bg-white p-8"
           >
-            <div>
-              {/* Black rounded icon wrapper */}
-              <div className="mb-6 flex size-12 items-center justify-center rounded-full bg-black">
-                <Image
-                  src={item.icon}
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 object-contain"
-                />
-              </div>
-
-              <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
-              <p className="mb-6 text-sm leading-relaxed text-slate-500">{item.description}</p>
-
-              {/* Bullets */}
-              <ul className="space-y-2.5">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-center gap-2.5 text-sm text-slate-700">
-                    <span className="font-semibold text-slate-500 select-none">✓</span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Black rounded-square icon */}
+            <div className="mb-5 flex size-11 items-center justify-center rounded-lg bg-slate-900">
+              <Image
+                src={item.icon}
+                alt=""
+                width={22}
+                height={22}
+                className="h-[22px] w-[22px] object-contain brightness-0 invert"
+              />
             </div>
+
+            <h3 className="mb-2 text-base font-bold text-slate-900">
+              {item.title}
+            </h3>
+            <p className="mb-5 text-sm leading-relaxed text-slate-500">
+              {item.description}
+            </p>
+
+            {/* Checkmark bullets */}
+            <ul className="space-y-2">
+              {item.bullets.map((bullet) => (
+                <li key={bullet} className="flex items-center gap-2 text-sm text-slate-600">
+                  <span className="select-none text-slate-400">✓</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
