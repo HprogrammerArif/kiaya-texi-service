@@ -1,42 +1,12 @@
 'use client';
 
-import { useState } from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
-type Tab = 'transfer' | 'hourly';
 
-type HeroBookingFormProps = {
-  labelPickup: string;
-  labelDropOff: string;
-  labelDate: string;
-  labelTime: string;
-  labelGetQuote: string;
-  tabTransfer: string;
-  tabHourly: string;
-  placeholderLocation: string;
-};
 
 /** Inline booking widget rendered inside the hero section. */
-export function HeroBookingForm(props: HeroBookingFormProps) {
-  const [activeTab, setActiveTab] = useState<Tab>('transfer');
-  const [pickup, setPickup] = useState('');
-  const [dropOff, setDropOff] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const params = new URLSearchParams({
-      type: activeTab,
-      pickup,
-      ...(activeTab === 'transfer' ? { dropOff } : {}),
-      date,
-      time,
-    });
-    // Redirect user to the external booking site with the selected parameters
-    window.location.href = `https://book.kaiya.taxi/booking-form.php?${params.toString()}`;
-  }
-
+export function HeroBookingForm() {
+ 
   return (
     <ScrollReveal  className="w-full max-w-6xl relative z-50">
       {/* 
