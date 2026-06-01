@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 type BeforeYouBookIconName = 'pricing' | 'included' | 'extra' | 'transparency';
 
@@ -77,65 +78,74 @@ const beforeYouBookIconColors: Record<BeforeYouBookIconName, string> = {
 export const BeforeYouBook = (props: BeforeYouBookProps): React.ReactNode => (
   <section className="bg-[#FAFAFA] py-16 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-          {props.title}
-        </h2>
-        <p className="mt-4 text-sm font-medium text-slate-500 sm:text-base">{props.description}</p>
-      </div>
+      <ScrollReveal animation="up">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+            {props.title}
+          </h2>
+          <p className="mt-4 text-sm font-medium text-slate-500 sm:text-base">
+            {props.description}
+          </p>
+        </div>
+      </ScrollReveal>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        {props.cards.map((card) => (
-          <article
+        {props.cards.map((card, index) => (
+          <ScrollReveal
             key={card.title}
-            className="flex flex-col justify-center rounded-2xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9"
+            animation="up"
+            delay={([0, 150, 300, 400] as const)[index % 4]}
           >
-            <div className="flex items-center gap-3">
-              <span className={beforeYouBookIconColors[card.icon]}>
-                {beforeYouBookIcons[card.icon]}
-              </span>
-              <h3 className="text-xl font-extrabold text-slate-800">{card.title}</h3>
-            </div>
+            <article className="group flex h-full flex-col justify-center rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:p-9">
+              <div className="flex items-center gap-3">
+                <span className={`${beforeYouBookIconColors[card.icon]} transition-transform duration-300 group-hover:scale-110`}>
+                  {beforeYouBookIcons[card.icon]}
+                </span>
+                <h3 className="text-xl font-extrabold text-slate-800">{card.title}</h3>
+              </div>
 
-            <p className="mt-6 text-sm leading-relaxed text-slate-500">{card.description}</p>
+              <p className="mt-6 text-sm leading-relaxed text-slate-500">{card.description}</p>
 
-            {card.items && card.items.length > 0 ? (
-              <ul className="mt-6 space-y-3">
-                {card.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed font-semibold text-slate-600"
-                  >
-                    {card.itemStyle === 'check' ? (
-                      <span aria-hidden="true" className="mt-0.5 text-slate-400">
-                        &#10003;
-                      </span>
-                    ) : (
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 size-1.5 shrink-0 rounded-full bg-slate-500"
-                      />
-                    )}
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </article>
+              {card.items && card.items.length > 0 ? (
+                <ul className="mt-6 space-y-3">
+                  {card.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-slate-600"
+                    >
+                      {card.itemStyle === 'check' ? (
+                        <span aria-hidden="true" className="mt-0.5 text-slate-400">
+                          &#10003;
+                        </span>
+                      ) : (
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 size-1.5 shrink-0 rounded-full bg-slate-500"
+                        />
+                      )}
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </article>
+          </ScrollReveal>
         ))}
       </div>
 
       <div className="mx-auto mt-20 grid max-w-5xl gap-8 sm:grid-cols-3 sm:gap-0">
         {props.points.map((point, index) => (
-          <div
+          <ScrollReveal
             key={point.title}
+            animation="up"
+            delay={([0, 150, 300] as const)[index % 3]}
             className={index === 0 ? 'sm:pr-8' : 'border-slate-300 sm:border-l sm:px-8'}
           >
             <h3 className="text-xl font-extrabold text-slate-800">{point.title}</h3>
-            <p className="mt-2 max-w-56 text-sm leading-relaxed font-medium text-slate-500">
+            <p className="mt-2 max-w-56 text-sm font-medium leading-relaxed text-slate-500">
               {point.description}
             </p>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </div>
