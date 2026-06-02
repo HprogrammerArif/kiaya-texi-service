@@ -597,6 +597,7 @@ export default async function IndexPage(props: IndexPageProps) {
       {/* ── Why Choose Kaiya ── */}
       <WhyChooseKaiya
         title={t('why_choose_title')}
+        description={t('why_choose_description')}
         image1="/assets/images/whyChooseKaiya1.jpg"
         image1Alt={t('why_choose_image_1_alt')}
         image2="/assets/images/whyChooseKaiya2.jpeg"
