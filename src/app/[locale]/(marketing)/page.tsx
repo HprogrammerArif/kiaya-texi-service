@@ -478,7 +478,7 @@ export default async function IndexPage(props: IndexPageProps) {
           </p>
 
           {/* Features Pill Bar */}
-          <div className="mt-6 mb-12 flex justify-center  max-w-5xl mx-auto ">
+          <div className="mt-6 mb:4 md:mb-12 flex justify-center  max-w-5xl mx-auto ">
             <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 rounded-full border border-white/20 bg-black/30 px-4 py-2 md:px-6 md:py-3 text-sm font-medium text-white backdrop-blur-md">
               <span className="flex items-center gap-1.5 whitespace-nowrap">
                 <span className="text-white/70">✓</span>

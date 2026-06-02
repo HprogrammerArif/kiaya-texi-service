@@ -1,4 +1,7 @@
+'use client';
+
 import * as React from 'react';
+import { useState } from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
 type ContactInfo = {
@@ -27,7 +30,34 @@ type ContactAndSupportProps = {
 /**
  * Contact & Support section matching the provided design.
  */
-export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNode => (
+export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNode => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+    
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/contact@kaiya.taxi', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
+  return (
   <section id="contact" className="bg-white py-16 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* Title */}
@@ -102,13 +132,10 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
         {/* Right Column: Form */}
         <ScrollReveal animation="right" delay={150}>
           <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_2px_20px_-8px_rgba(0,0,0,0.05)] sm:p-8">
-            <form className="space-y-6" action="https://formsubmit.co/work.mohammadarif@gmail.com" method="POST">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* FormSubmit Configuration */}
               <input type="hidden" name="_subject" value="New Contact Form Submission from Kaiya" />
-              {/* Optional: Disable captcha for better UX, or remove this line to keep it */}
               <input type="hidden" name="_captcha" value="false" />
-              {/* Redirect back to the same page after submission (you can change this to a thank-you page later) */}
-              <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.href : ''} />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700">
                   {props.form.nameLabel}
@@ -163,10 +190,14 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
               <div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:scale-105 hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:scale-95"
+                  disabled={status === 'loading' || status === 'success'}
+                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-8 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:scale-105 hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:scale-95 disabled:opacity-70 disabled:hover:scale-100 disabled:cursor-not-allowed"
                 >
-                  {props.form.submitText}
+                  {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent Successfully! ✓' : props.form.submitText}
                 </button>
+                {status === 'error' && (
+                  <p className="mt-3 text-sm font-medium text-red-600">Something went wrong. Please try again.</p>
+                )}
               </div>
             </form>
           </div>
@@ -174,4 +205,5 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
       </div>
     </div>
   </section>
-);
+  );
+};
