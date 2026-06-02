@@ -102,11 +102,13 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
         {/* Right Column: Form */}
         <ScrollReveal animation="right" delay={150}>
           <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_2px_20px_-8px_rgba(0,0,0,0.05)] sm:p-8">
-            <form className="space-y-6" action="https://api.web3forms.com/submit" method="POST">
-              {/* Replace with your Web3Forms Access Key */}
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-              <input type="hidden" name="subject" value="New Contact Form Submission from Kaiya" />
-              <input type="checkbox" name="botcheck" id="" style={{ display: 'none' }} />
+            <form className="space-y-6" action="https://formsubmit.co/work.mohammadarif@gmail.com" method="POST">
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Kaiya" />
+              {/* Optional: Disable captcha for better UX, or remove this line to keep it */}
+              <input type="hidden" name="_captcha" value="false" />
+              {/* Redirect back to the same page after submission (you can change this to a thank-you page later) */}
+              <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.href : ''} />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700">
                   {props.form.nameLabel}
