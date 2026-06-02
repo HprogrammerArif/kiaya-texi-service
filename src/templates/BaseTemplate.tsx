@@ -69,12 +69,12 @@ export const BaseTemplate = (props: {
 
       {/* ── Footer ── */}
       <footer className="border-t border-slate-900 bg-slate-950 text-slate-400">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4 text-center sm:text-left">
             {/* Column 1: Brand & About */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center sm:items-start gap-5">
               {/* Logo */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <Image
                   src="/assets/logo/kaiyaLogoWhite.svg"
                   alt="Kiaya Taxi Logo"
@@ -85,9 +85,9 @@ export const BaseTemplate = (props: {
                 
               </div>
               {/* Description */}
-              <p className="max-w-xs text-sm leading-relaxed text-slate-400">{t('about_text')}</p>
+              <p className="max-w-xs text-sm leading-relaxed text-slate-400 mx-auto sm:mx-0">{t('about_text')}</p>
               {/* Social Icons */}
-              <div className="mt-2 flex items-center gap-3">
+              <div className="mt-2 flex items-center justify-center sm:justify-start gap-3">
                 <a
                   href="https://instagram.com"
                   target="_blank"
@@ -139,11 +139,11 @@ export const BaseTemplate = (props: {
             </div>
 
             {/* Column 2: Quick Links */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center sm:items-start gap-5">
               <h3 className="text-xs font-bold tracking-widest text-white uppercase">
                 {t('heading_quick_links')}
               </h3>
-              <ul className="flex flex-col gap-3 text-sm">
+              <ul className="flex flex-col items-center sm:items-start gap-3 text-sm">
                 <li>
                   <Link
                     href="/#services"
@@ -181,11 +181,11 @@ export const BaseTemplate = (props: {
             </div>
 
             {/* Column 3: Legal */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center sm:items-start gap-5">
               <h3 className="text-xs font-bold tracking-widest text-white uppercase">
                 {t('heading_legal')}
               </h3>
-              <ul className="flex flex-col gap-3 text-sm">
+              <ul className="flex flex-col items-center sm:items-start gap-3 text-sm">
                 <li>
                   <Link
                     href="/privacy"
@@ -223,12 +223,12 @@ export const BaseTemplate = (props: {
             </div>
 
             {/* Column 4: Contact */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center sm:items-start gap-5">
               <h3 className="text-xs font-bold tracking-widest text-white uppercase">
                 {t('heading_contact')}
               </h3>
-              <ul className="flex flex-col gap-3.5 text-sm text-slate-400">
-                <li className="flex items-start gap-3">
+              <ul className="flex flex-col items-center sm:items-start gap-3.5 text-sm text-slate-400">
+                <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                   <svg
                     className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
@@ -247,7 +247,7 @@ export const BaseTemplate = (props: {
                     {t('contact_phone')}
                   </a>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                   <svg
                     className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
@@ -267,7 +267,7 @@ export const BaseTemplate = (props: {
                     {t('contact_email')}
                   </a>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start sm:items-center justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
                   <svg
                     className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
                     fill="none"
@@ -287,7 +287,7 @@ export const BaseTemplate = (props: {
           </div>
 
           {/* Bottom border copyright bar */}
-          <div className="mt-12 border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
+          <div className="mt-8 border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
             <span>
               © {new Date().getFullYear()}{' '}
               <span className="font-semibold text-slate-400">{AppConfig.name}</span>. All rights
