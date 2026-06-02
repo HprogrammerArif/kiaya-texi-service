@@ -34,7 +34,7 @@ export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNod
   );
 
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-12 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal animation="up">
           <div className="mb-12 text-center">
@@ -57,9 +57,9 @@ export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNod
                   className="min-w-0 shrink-0 grow-0 basis-full pl-4 sm:basis-1/2 lg:basis-1/3 select-none"
                 >
                   {/* Card */}
-                  <div className="group flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
+                  <div className="group flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
                     {/* Header: Avatar + Info */}
-                    <div className="flex items-center gap-4 border-b border-slate-50 pb-6">
+                    <div className="flex items-center gap-4 border-b border-slate-50 pb-4 sm:pb-6">
                       <div className="relative size-12 shrink-0 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-110">
                         <Image
                           src={testimonial.avatar}
@@ -76,12 +76,12 @@ export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNod
                     </div>
 
                     {/* Body: Quote */}
-                    <blockquote className="mt-6 flex-1 text-sm leading-relaxed text-slate-700 sm:text-base">
+                    <blockquote className="mt-4 sm:mt-6 flex-1 text-sm leading-relaxed text-slate-700 sm:text-base">
                       {testimonial.quote}
                     </blockquote>
 
                     {/* Footer: Stars */}
-                    <div className="mt-6 flex gap-1 text-[#d97706]">
+                    <div className="mt-4 sm:mt-6 flex gap-1 text-[#d97706]">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
