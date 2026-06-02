@@ -588,7 +588,11 @@ export default async function IndexPage(props: IndexPageProps) {
         imageAlt={t('about_kaiya_image_alt')}
       />
 
-      <CoreValues title={t('core_values_title')} items={coreValues} />
+      <CoreValues 
+        title={t('core_values_title')} 
+        description={t('core_values_description')}
+        items={coreValues} 
+      />
 
       {/* ── Why Choose Kaiya ── */}
       <WhyChooseKaiya

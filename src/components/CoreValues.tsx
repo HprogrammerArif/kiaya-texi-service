@@ -10,22 +10,28 @@ type CoreValuesItem = {
 
 type CoreValuesProps = {
   title: string;
+  description?: string;
   items: readonly CoreValuesItem[];
 };
 
 /**
  * Renders the company's core values as a grid of titled cards.
- * @param props Section title and value cards
+ * @param props Section title, optional description, and value cards
  * @returns React.ReactNode representing the core values section
  */
 export const CoreValues = (props: CoreValuesProps): React.ReactNode => (
   <section className="bg-white py-16 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <ScrollReveal animation="up">
-        <div className="text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
             {props.title}
           </h2>
+          {props.description && (
+            <p className="mt-4 text-lg text-slate-600">
+              {props.description}
+            </p>
+          )}
         </div>
       </ScrollReveal>
 
