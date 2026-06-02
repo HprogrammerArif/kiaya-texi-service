@@ -29,7 +29,7 @@ export const CoreValues = (props: CoreValuesProps): React.ReactNode => (
         </div>
       </ScrollReveal>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-2">
+      <div className="mt-8 md:mt-14 grid gap-6 lg:grid-cols-2">
         {props.items.map((item, index) => (
           <ScrollReveal
             key={item.title}
