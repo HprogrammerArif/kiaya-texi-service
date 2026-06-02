@@ -23,16 +23,16 @@ export const BaseTemplate = (props: {
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/60 backdrop-blur-md">
         <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo / app name */}
-          <div className="flex items-center gap-8">
-            
+          <div className="flex items-center gap-4 md:gap-8">
+            <Link href="/" className="transition-transform hover:scale-105 active:scale-100">
               <Image
                 src={AppConfig.logo}
                 alt="Kiaya Taxi Logo"
-                width={164.47}
-                height={36.23}
-               
+                width={160.47}
+                height={34.23}
                 style={{ width: 'auto', height: 'auto' }}
               />
+            </Link>
 
             {props.leftNav && (
               <nav aria-label="Left navigation">
@@ -49,7 +49,7 @@ export const BaseTemplate = (props: {
               aria-label="Center navigation"
               className="absolute left-1/2 -translate-x-1/2 transform"
             >
-              <ul className="hidden items-center gap-6 text-sm font-medium text-gray-600 sm:flex">
+              <ul className="hidden items-center gap-4 lg:gap-6 text-sm font-medium text-gray-600 sm:flex">
                 {props.centerNav}
               </ul>
             </nav>
@@ -57,7 +57,7 @@ export const BaseTemplate = (props: {
 
           {/* Right-side nav (auth links + locale switcher) */}
           <nav aria-label="Right navigation">
-            <ul className="flex items-center gap-4 text-sm font-medium text-gray-600">
+            <ul className="flex items-center gap-2 lg:gap-4 text-sm font-medium text-gray-600">
               {props.rightNav}
             </ul>
           </nav>

@@ -462,7 +462,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           {/* Headline */}
-          <h1 className="mb-12 mt-4  max-w-5xl mx-auto  text-center text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl leading-tight">
+          <h1 className="mb-10 mt-4  max-w-5xl mx-auto  text-center text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl leading-tight">
             {t('hero_title')}
           </h1>
 
@@ -472,13 +472,14 @@ export default async function IndexPage(props: IndexPageProps) {
           </div>
 
           {/* Subtext */}
-          <p className="mt-24 text-center text-sm text-white/80 sm:text-base  max-w-5xl mx-auto ">
+          <p className="xl:mt-24 mt-48 md:mt-68 lg:mt-60
+           text-center text-sm text-white/80 sm:text-base  max-w-5xl mx-auto ">
             {t('hero_subtext')}
           </p>
 
           {/* Features Pill Bar */}
           <div className="mt-6 mb-12 flex justify-center  max-w-5xl mx-auto ">
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 rounded-full border border-white/20 bg-black/30 px-6 py-3 text-sm font-medium text-white backdrop-blur-md">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 rounded-full border border-white/20 bg-black/30 px-4 py-2 md:px-6 md:py-3 text-sm font-medium text-white backdrop-blur-md">
               <span className="flex items-center gap-1.5 whitespace-nowrap">
                 <span className="text-white/70">✓</span>
                 {t('hero_feature_1')}
