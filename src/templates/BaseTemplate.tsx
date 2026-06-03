@@ -28,9 +28,9 @@ export const BaseTemplate = (props: {
               <Image
                 src={AppConfig.logo}
                 alt="Kiaya Taxi Logo"
-                width={160.47}
-                height={34.23}
-                style={{ width: 'auto', height: 'auto' }}
+                width={160}
+                height={34}
+                className="h-auto w-24 sm:w-32 lg:w-40"
               />
             </Link>
 
@@ -46,7 +46,7 @@ export const BaseTemplate = (props: {
           {/* Center-side nav */}
           {props.centerNav && (
             <nav
-              aria-label="Center navigation"
+              aria-label="Center navigation "
               className="absolute left-1/2 -translate-x-1/2 transform"
             >
               <ul className="hidden items-center gap-4 lg:gap-6 text-sm font-medium text-gray-600 sm:flex">
