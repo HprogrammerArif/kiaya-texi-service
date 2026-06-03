@@ -50,7 +50,7 @@ export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNod
         {/* Embla Carousel Viewport */}
         <ScrollReveal animation="fade" delay={150}>
           <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-            <div className="flex -ml-4 touch-pan-y">
+            <div className="flex  touch-pan-y">
               {props.testimonials.map((testimonial, idx) => (
                 <div
                   key={idx}
