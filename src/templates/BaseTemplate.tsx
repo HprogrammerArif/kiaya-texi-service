@@ -67,6 +67,36 @@ export const BaseTemplate = (props: {
       {/* ── Page content ── */}
       <main className="flex-1">{props.children}</main>
 
+      {/* ── Floating WhatsApp Button ── */}
+      <a
+        id="whatsapp-float-btn"
+        href="https://wa.me/818082938862"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className={[
+          'fixed bottom-6 right-6 z-50',
+          'flex h-14 w-14 items-center justify-center',
+          'rounded-full bg-[#25D366] shadow-lg',
+          'transition-transform duration-200 hover:scale-110 active:scale-95',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]',
+          // pulse ring
+          'before:absolute before:inset-0 before:rounded-full before:bg-[#25D366] before:opacity-60',
+          'before:animate-ping',
+        ].join(' ')}
+      >
+        {/* WhatsApp SVG logo */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          className="relative z-10 h-8 w-8"
+          fill="white"
+        >
+          <path d="M16.004 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.37.638 4.591 1.75 6.512L2.667 29.333l6.98-1.724A13.267 13.267 0 0 0 16.004 29.333c7.368 0 13.329-5.969 13.329-13.333S23.372 2.667 16.004 2.667Zm0 24.267a11.04 11.04 0 0 1-5.618-1.535l-.402-.24-4.143 1.024 1.055-3.991-.263-.41A10.948 10.948 0 0 1 5.001 16c0-6.075 4.928-11.004 11.003-11.004S27.007 9.925 27.007 16c0 6.076-4.928 11.004-11.003 11.004Zm6.03-8.24c-.33-.165-1.95-.962-2.253-1.072-.303-.11-.524-.165-.744.165-.22.33-.854 1.072-1.047 1.292-.193.22-.385.248-.715.083-.33-.165-1.395-.514-2.657-1.64-.982-.875-1.645-1.956-1.838-2.286-.193-.33-.021-.509.145-.673.15-.148.33-.385.495-.578.166-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.165-.744-1.793-1.02-2.455-.268-.644-.541-.556-.744-.566l-.633-.011c-.22 0-.578.083-.88.413-.303.33-1.155 1.127-1.155 2.75s1.183 3.19 1.348 3.41c.165.22 2.327 3.554 5.64 4.986.788.34 1.403.543 1.882.694.79.252 1.51.216 2.079.131.634-.094 1.95-.797 2.225-1.567.275-.77.275-1.43.193-1.567-.083-.138-.303-.22-.633-.385Z" />
+        </svg>
+      </a>
+
       {/* ── Footer ── */}
       <footer className="border-t border-slate-900 bg-slate-950 text-slate-400">
         <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:py-20">
