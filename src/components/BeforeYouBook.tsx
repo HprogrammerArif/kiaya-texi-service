@@ -133,18 +133,20 @@ export const BeforeYouBook = (props: BeforeYouBookProps): React.ReactNode => (
         ))}
       </div>
 
-      <div className="mx-auto mt-20 grid max-w-5xl gap-8 sm:grid-cols-3 sm:gap-0">
+      <div className="mx-auto mt-14 sm:mt-20 max-w-5xl sm:grid sm:grid-cols-3 sm:gap-0 flex flex-col divide-y divide-slate-200 sm:divide-y-0">
         {props.points.map((point, index) => (
           <ScrollReveal
             key={point.title}
             animation="up"
             delay={([0, 150, 300] as const)[index % 3]}
-            className={index === 0 ? 'sm:pr-8' : 'border-slate-300 sm:border-l sm:px-8'}
+            className={index === 0 ? 'sm:pr-8 py-8 sm:py-0' : 'border-slate-300 sm:border-l sm:px-8 py-8 sm:py-0'}
           >
-            <h3 className="text-xl font-extrabold text-slate-800">{point.title}</h3>
-            <p className="mt-2 max-w-56 text-sm font-medium leading-relaxed text-slate-500">
-              {point.description}
-            </p>
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl font-extrabold text-slate-800">{point.title}</h3>
+              <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500 sm:max-w-56">
+                {point.description}
+              </p>
+            </div>
           </ScrollReveal>
         ))}
       </div>
