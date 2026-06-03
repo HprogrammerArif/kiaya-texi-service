@@ -287,7 +287,7 @@ export const BaseTemplate = (props: {
           </div>
 
           {/* Bottom border copyright bar */}
-          <div className="mt-8 border-t border-slate-800 pt-8 md:pt-6 flex flex-col  items-center justify-center gap-3 text-xs text-slate-500">
+          <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col  items-center justify-center gap-3 text-xs text-slate-500">
             <span>
               © {new Date().getFullYear()}{' '}
               <span className="font-semibold text-slate-400">{AppConfig.name}</span>. All rights
