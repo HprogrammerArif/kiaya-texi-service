@@ -51,7 +51,7 @@ export const LocaleSwitcher = () => {
       </svg>
 
       {/* Locale text */}
-      <span className="tracking-wide uppercase">{locale}</span>
+      <span className="tracking-wide uppercase text-xs md:text-sm font-bold">{locale}</span>
 
       {/* Invisible native select overlay */}
       <select
