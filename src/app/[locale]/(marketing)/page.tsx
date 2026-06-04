@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { Features } from '@/components/Features';
 import { HowItWorks } from '@/components/HowItWorks';
 import { JoinOurNetwork } from '@/components/JoinOurNetwork';
+import { JsonLd } from '@/components/JsonLd';
 import { SafetyServiceStandards } from '@/components/SafetyServiceStandards';
 import { TravelOptions } from '@/components/TravelOptions';
 import { VehicleJourney } from '@/components/VehicleJourney';
@@ -446,6 +447,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
   return (
     <>
+      <JsonLd locale={locale} />
       {/* ── Hero ── */}
       <section id="bookings" className="relative flex min-h-[85vh] items-center justify-center overflow-hidden py-20 sm:py-28">
         {/* Background Image */}
