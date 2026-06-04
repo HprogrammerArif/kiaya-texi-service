@@ -108,7 +108,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
   const vehicleJourney = [
     {
-      image: '/assets/images/Compact-Sedan.jpg',
+      image: '/assets/newImages/sedan.png',
       title: t('vehicle_journey_compact_sedan_title'),
       subtitle: t('vehicle_journey_compact_sedan_subtitle'),
       description: t('vehicle_journey_compact_sedan_description'),
@@ -121,7 +121,7 @@ export default async function IndexPage(props: IndexPageProps) {
       imageSide: 'left',
     },
     {
-      image: '/assets/images/Mini-Van.png',
+      image: '/assets/newImages/minivan.png',
       title: t('vehicle_journey_mini_van_title'),
       subtitle: t('vehicle_journey_mini_van_subtitle'),
       description: t('vehicle_journey_mini_van_description'),
@@ -134,7 +134,7 @@ export default async function IndexPage(props: IndexPageProps) {
       imageSide: 'right',
     },
     {
-      image: '/assets/images/Comfort-Van.jpg',
+      image: '/assets/newImages/van.png',
       title: t('vehicle_journey_comfort_van_title'),
       subtitle: t('vehicle_journey_comfort_van_subtitle'),
       description: t('vehicle_journey_comfort_van_description'),
@@ -147,7 +147,7 @@ export default async function IndexPage(props: IndexPageProps) {
       imageSide: 'left',
     },
     {
-      image: '/assets/images/Premium-SUV.jpg',
+      image: '/assets/newImages/suv.png',
       title: t('vehicle_journey_premium_suv_title'),
       subtitle: t('vehicle_journey_premium_suv_subtitle'),
       description: t('vehicle_journey_premium_suv_description'),
@@ -517,7 +517,7 @@ export default async function IndexPage(props: IndexPageProps) {
       <HowItWorks
         eyebrow={t('how_it_works_eyebrow')}
         title={t('how_it_works_title')}
-        image="/assets/images/howItWorks.png"
+        image="/assets/newImages/YourJourney.png"
         imageAlt={t('how_it_works_image_alt')}
         steps={howItWorksSteps}
         confirmationLabel={t('how_it_works_confirmation_label')}
@@ -527,7 +527,7 @@ export default async function IndexPage(props: IndexPageProps) {
       <AirportPickup
         title={t('airport_pickup_title')}
         description={t('airport_pickup_description')}
-        image="/assets/images/pickupImage.png"
+        image="/assets/newImages/AirportPickup.png"
         imageAlt={t('airport_pickup_image_alt')}
         arrowImage="/assets/images/errow.png"
         items={airportPickupItems}
