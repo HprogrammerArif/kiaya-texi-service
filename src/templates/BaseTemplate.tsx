@@ -65,7 +65,7 @@ export const BaseTemplate = (props: {
       </header>
 
       {/* ── Page content ── */}
-      <main className="flex-1">{props.children}</main>
+      <main className="flex-1 overflow-x-hidden">{props.children}</main>
 
       {/* ── Floating WhatsApp Button ── */}
       <a
