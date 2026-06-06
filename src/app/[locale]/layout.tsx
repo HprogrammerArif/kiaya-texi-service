@@ -16,8 +16,17 @@ const baseUrl = getBaseUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  applicationName: 'Kaiya',
-  authors: [{ name: 'Kaiya, Inc.' }],
+  applicationName: 'Kaiya Taxi',
+  authors: [{ name: 'Kaiya Taxi' }],
+  keywords: [
+    'Hokkaido Taxi', 'Hokkaido Private Transfer', 'New Chitose Airport Transfer', 'Hokkaido Airport Transfer',
+    'Private Taxi Hokkaido', 'Hokkaido Transportation Service', 'Chitose Taxi Service', 'Hokkaido Chauffeur Service',
+    'Hokkaido Car Service', 'Hokkaido Private Driver', 'Niseko Transfer', 'Sapporo Airport Transfer', 'Furano Transfer',
+    'Otaru Transfer', 'Rusutsu Transfer', 'Kiroro Transfer', 'Lake Toya Transfer', 'Noboribetsu Transfer',
+    'Hokkaido Ski Resort Transfer', 'New Chitose Airport Taxi', 'Hokkaido Sightseeing Taxi', 'Hokkaido Day Tour Transportation',
+    'Hokkaido Luxury Transfer', 'Hokkaido English Speaking Driver', 'Hokkaido Chinese Speaking Driver'
+  ],
+  description: 'Kaiya Taxi provides professional airport transfers, private transportation, and sightseeing services across Hokkaido, connecting travelers to destinations safely, comfortably, and reliably.',
   icons: [
     {
       rel: 'apple-touch-icon',
@@ -42,8 +51,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    siteName: 'Kaiya',
+    siteName: 'Kaiya Taxi',
     locale: 'en',
+    description: 'Kaiya Taxi provides professional airport transfers, private transportation, and sightseeing services across Hokkaido, connecting travelers to destinations safely, comfortably, and reliably.',
     images: [
       {
         url: '/assets/images/og-image.png',

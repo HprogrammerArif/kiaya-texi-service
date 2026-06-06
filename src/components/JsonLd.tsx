@@ -14,13 +14,13 @@ export const JsonLd = (props: JsonLdProps): React.ReactNode => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
-    'name': 'Kaiya',
-    'alternateName': 'Kaiya Taxi',
+    'name': 'Kaiya Taxi',
+    'alternateName': 'Kaiya',
     'url': baseUrl,
     'logo': `${baseUrl}/assets/logo/kaiyaLogoBlack.svg`,
     'image': `${baseUrl}/assets/images/og-image.png`,
     'description':
-      'Premium private taxi and airport transfer service in Hokkaido, Japan. Professional drivers, comfortable vehicles, and transparent pricing.',
+      'Kaiya Taxi is a licensed private transfer and taxi company based in Chitose, Hokkaido. We provide safe, comfortable, and reliable airport transfers, private transportation, and sightseeing services throughout Hokkaido with professional drivers and premium vehicles.',
     'telephone': '+81-80-8293-8862',
     'email': 'support@kiayataxi.com',
     'address': {
@@ -43,11 +43,26 @@ export const JsonLd = (props: JsonLdProps): React.ReactNode => {
       },
       {
         '@type': 'City',
-        'name': 'Tokyo',
-        'containedInPlace': { '@type': 'Country', 'name': 'Japan' },
+        'name': 'Sapporo',
+        'containedInPlace': { '@type': 'State', 'name': 'Hokkaido' },
+      },
+      {
+        '@type': 'City',
+        'name': 'Chitose',
+        'containedInPlace': { '@type': 'State', 'name': 'Hokkaido' },
+      },
+      {
+        '@type': 'City',
+        'name': 'Niseko',
+        'containedInPlace': { '@type': 'State', 'name': 'Hokkaido' },
       },
     ],
     'serviceType': [
+      'Taxi Service',
+      'Airport Shuttle Service',
+      'Transportation Service',
+      'Tour Operator',
+      'Chauffeur Service',
       'Airport Transfer',
       'Hotel Transfer',
       'Hourly Charter',
