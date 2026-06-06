@@ -119,7 +119,7 @@ export const BaseTemplate = (props: {
               {/* Social Icons */}
               <div className="mt-2 flex items-center gap-3">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/kaiyataxi/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
@@ -135,7 +135,7 @@ export const BaseTemplate = (props: {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/kaiyainc/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
@@ -151,7 +151,7 @@ export const BaseTemplate = (props: {
                 </a>
 
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/BookKaiyaTaxi"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook"
