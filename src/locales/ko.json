@@ -164,8 +164,8 @@
     "accessibility_special_requests_language_title": "언어 지원 & 지원",
     "accessibility_special_requests_language_description": "저희 드라이버는 일본어와 기본 영어를 구사하며 한국어와 중국어도 지원합니다. 복잡한 의사소통 필요나 언어 요구사항이 있으면 예약 시 말씀해 주시면 적절한 지원을 준비하겠습니다.",
     "accessibility_special_requests_unique_title": "특별한 필요가 있으신가요?",
-    "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
-    "accessibility_special_requests_unique_description": "모든 여행자는 특별합니다. 위에서 다루지 않은 특별 요청이나 요구사항이 있으면 저희에게 알려주세요. <email>contact@kaiya.taxi</email>로 직접 세부 사항을 보내주시면 요청을 수용하기 위해 최선을 다하겠습니다.",
+    "accessibility_special_requests_contact_email": "c.contact@gmail.com",
+    "accessibility_special_requests_unique_description": "모든 여행자는 특별합니다. 위에서 다루지 않은 특별 요청이나 요구사항이 있으면 저희에게 알려주세요. <email>c.contact@gmail.com</email>로 직접 세부 사항을 보내주시면 요청을 수용하기 위해 최선을 다하겠습니다.",
     "accessibility_special_requests_commitment": "저희의 약속은 당신의 여행 경험을 편안하고 안전하며 필요에 맞게 조정하는 것입니다.",
     "safety_service_standards_title": "안전 & 서비스 기준",
     "safety_service_standards_description": "모든 탑승은 엄격한 안전 프로토콜, 공인 드라이버, 잘 관리된 차량으로 보장되어 완전한 신뢰로 이동할 수 있습니다.",
@@ -268,7 +268,7 @@
     "contact_support_phone_label": "전화",
     "contact_support_phone_value": "+81 80-8293-8862",
     "contact_support_email_label": "이메일",
-    "contact_support_email_value": "support@kiayataxi.com",
+    "contact_support_email_value": "c.contact@gmail.com",
     "contact_support_location_label": "위치",
     "contact_support_location_value": "일본 홋카이도",
     "contact_support_footer": "저희 팀은 예약, 변경 또는 여행 질문에 24/7 도움드릴 준비가 되어 있습니다.",
@@ -314,7 +314,7 @@
     "link_terms": "이용 약관",
     "link_disclosure": "상업 공시",
     "contact_phone": "+818082938862",
-    "contact_email": "c.contact@kaiya.taxi",
+    "contact_email": "c.c.contact@gmail.com",
     "contact_address": "일본 홋카이도 삿포로"
   },
   "TermsAndConditions": {

@@ -145,7 +145,7 @@ export default async function PrivacyPage(props: { params: Promise<{ locale: str
             <div className="rounded-xl bg-slate-50 p-6 shadow-sm border border-slate-100 mt-4 text-slate-700">
               <p className="font-semibold text-slate-900">{t('section_11_company')}</p>
               <p>{t('section_11_address')}</p>
-              <p className="mt-2">{t('section_11_email')}<a href="mailto:contact@kaiya.taxi" className="text-blue-600 hover:underline">contact@kaiya.taxi</a></p>
+              <p className="mt-2">{t('section_11_email')}<a href="mailto:c.contact@gmail.com" className="text-blue-600 hover:underline">c.contact@gmail.com</a></p>
               <p>{t('section_11_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
             </div>
           </div>

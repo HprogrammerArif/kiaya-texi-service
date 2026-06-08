@@ -164,8 +164,8 @@
     "accessibility_special_requests_language_title": "การสนับสนุนทางภาษา & ความช่วยเหลือ",
     "accessibility_special_requests_language_description": "คนขับของเราพูดภาษาญี่ปุ่นและภาษาอังกฤษพื้นฐาน โดยมีบริการภาษาจีนและเกาหลีด้วย สำหรับความต้องการการสื่อสารที่ซับซ้อนหรือข้อกำหนดทางภาษา โปรดระบุในการจองของคุณและเราจะจัดเตรียมการสนับสนุนที่เหมาะสม",
     "accessibility_special_requests_unique_title": "มีความต้องการพิเศษหรือไม่",
-    "accessibility_special_requests_contact_email": "contact@kaiya.taxi",
-    "accessibility_special_requests_unique_description": "นักเดินทางทุกคนมีเอกลักษณ์เฉพาะตัว หากคุณมีคำขอพิเศษหรือข้อกำหนดที่ไม่ได้ระบุไว้ข้างต้น เราอยากรับฟัง ส่งอีเมลหาเราโดยตรงพร้อมรายละเอียดที่ <email>contact@kaiya.taxi</email> และเราจะพยายามอย่างเต็มที่เพื่อรองรับคำขอของคุณ",
+    "accessibility_special_requests_contact_email": "c.contact@gmail.com",
+    "accessibility_special_requests_unique_description": "นักเดินทางทุกคนมีเอกลักษณ์เฉพาะตัว หากคุณมีคำขอพิเศษหรือข้อกำหนดที่ไม่ได้ระบุไว้ข้างต้น เราอยากรับฟัง ส่งอีเมลหาเราโดยตรงพร้อมรายละเอียดที่ <email>c.contact@gmail.com</email> และเราจะพยายามอย่างเต็มที่เพื่อรองรับคำขอของคุณ",
     "accessibility_special_requests_commitment": "ความมุ่งมั่นของเราคือการทำให้ประสบการณ์การเดินทางของคุณสะดวกสบาย ปลอดภัย และปรับแต่งให้เหมาะกับความต้องการของคุณ",
     "safety_service_standards_title": "มาตรฐานความปลอดภัยและบริการ",
     "safety_service_standards_description": "ทุกการเดินทางได้รับการสนับสนุนโดยโปรโตคอลความปลอดภัยที่เข้มงวด คนขับรถที่ได้รับการรับรอง และยานพาหนะที่ได้รับการดูแลเป็นอย่างดี ทำให้คุณเดินทางด้วยความมั่นใจเต็มเปี่ยม",
@@ -268,7 +268,7 @@
     "contact_support_phone_label": "โทรศัพท์",
     "contact_support_phone_value": "+81 80-8293-8862",
     "contact_support_email_label": "อีเมล",
-    "contact_support_email_value": "support@kiayataxi.com",
+    "contact_support_email_value": "c.contact@gmail.com",
     "contact_support_location_label": "สถานที่ตั้ง",
     "contact_support_location_value": "ฮอกไกโด ญี่ปุ่น",
     "contact_support_footer": "ทีมงานของเราพร้อมให้บริการทุกวันตลอด 24 ชั่วโมง เพื่อช่วยเหลือเรื่องการจอง การเปลี่ยนแปลง หรือคำถามเกี่ยวกับการเดินทาง",
@@ -314,7 +314,7 @@
     "link_terms": "เงื่อนไขการใช้บริการ",
     "link_disclosure": "การเปิดเผยข้อมูลทางการค้า",
     "contact_phone": "+818082938862",
-    "contact_email": "c.contact@kaiya.taxi",
+    "contact_email": "c.c.contact@gmail.com",
     "contact_address": "ซัปโปโร ฮอกไกโด ญี่ปุ่น"
   },
   "TermsAndConditions": {
