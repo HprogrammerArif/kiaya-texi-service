@@ -164,8 +164,8 @@
     "accessibility_special_requests_language_title": "语言支持 & 协助",
     "accessibility_special_requests_language_description": "我们的司机会说日语和基本英语，也提供中文和韩语服务。如有复杂的沟通需求或语言要求，请在预订时说明，我们将安排适当的支持。",
     "accessibility_special_requests_unique_title": "有特殊需求？",
-    "accessibility_special_requests_contact_email": "c.contact@gmail.com",
-    "accessibility_special_requests_unique_description": "每位旅行者都是独特的。如果您有上述未涵盖的特殊要求，我们很乐意听取。请直接发送电子邮件至 <email>c.contact@gmail.com</email>，详细说明您的需求，我们将尽力满足您的请求。",
+    "accessibility_special_requests_contact_email": "c.contact@kaiya.taxi",
+    "accessibility_special_requests_unique_description": "每位旅行者都是独特的。如果您有上述未涵盖的特殊要求，我们很乐意听取。请直接发送电子邮件至 <email>c.contact@kaiya.taxi</email>，详细说明您的需求，我们将尽力满足您的请求。",
     "accessibility_special_requests_commitment": "我们的承诺是让您的出行体验舒适、安全，并根据您的需求量身定制。",
     "safety_service_standards_title": "安全 & 服务标准",
     "safety_service_standards_description": "每次出行都有严格的安全协议、认证司机和维护良好的车辆作为保障，让您满怀信心地出行。",
@@ -268,7 +268,7 @@
     "contact_support_phone_label": "电话",
     "contact_support_phone_value": "+81 80-8293-8862",
     "contact_support_email_label": "电子邮件",
-    "contact_support_email_value": "c.contact@gmail.com",
+    "contact_support_email_value": "c.contact@kaiya.taxi",
     "contact_support_location_label": "位置",
     "contact_support_location_value": "日本北海道",
     "contact_support_footer": "我们的团队24/7全天候协助预订、变更或旅行问题。",
@@ -314,7 +314,7 @@
     "link_terms": "服务条款",
     "link_disclosure": "商业披露",
     "contact_phone": "+818082938862",
-    "contact_email": "c.c.contact@gmail.com",
+    "contact_email": "c.c.contact@kaiya.taxi",
     "contact_address": "日本北海道札幌"
   },
   "TermsAndConditions": {

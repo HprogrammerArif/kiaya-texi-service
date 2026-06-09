@@ -19,10 +19,10 @@ let replacements = 0;
 files.forEach(file => {
   let content = fs.readFileSync(file, 'utf8');
   const original = content;
-  content = content.replace(/support@kiayataxi\.com/g, 'c.contact@gmail.com');
-  content = content.replace(/contact@kaiya\.taxi/g, 'c.contact@gmail.com');
-  content = content.replace(/info@hokkaidotaxi\.com/g, 'c.contact@gmail.com');
-  content = content.replace(/c\.contact@kaiya\.taxi/g, 'c.contact@gmail.com');
+  content = content.replace(/support@kiayataxi\.com/g, 'c.contact@kaiya.taxi');
+  content = content.replace(/contact@kaiya\.taxi/g, 'c.contact@kaiya.taxi');
+  content = content.replace(/info@hokkaidotaxi\.com/g, 'c.contact@kaiya.taxi');
+  content = content.replace(/c\.contact@kaiya\.taxi/g, 'c.contact@kaiya.taxi');
   
   if (original !== content) {
     fs.writeFileSync(file, content, 'utf8');

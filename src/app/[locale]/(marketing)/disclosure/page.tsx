@@ -51,7 +51,7 @@ export default async function DisclosurePage(props: { params: Promise<{ locale: 
               <p><span className="font-semibold text-slate-900">{t('section_1_company_label')}</span> {t('section_1_company')}</p>
               <p className="mt-2"><span className="font-semibold text-slate-900">{t('section_1_location_label')}</span> {t('section_1_location')}</p>
               <p className="mt-4 font-semibold text-slate-900">{t('section_1_contact_label')}</p>
-              <p>{t('section_1_email')}<a href="mailto:c.contact@gmail.com" className="text-blue-600 hover:underline">c.contact@gmail.com</a></p>
+              <p>{t('section_1_email')}<a href="mailto:c.contact@kaiya.taxi" className="text-blue-600 hover:underline">c.contact@kaiya.taxi</a></p>
               <p>{t('section_1_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default async function DisclosurePage(props: { params: Promise<{ locale: 
             <div className="rounded-xl bg-slate-50 p-6 shadow-sm border border-slate-100 mt-4 text-slate-700">
               <p className="font-semibold text-slate-900">{t('section_13_company')}</p>
               <p>{t('section_13_address')}</p>
-              <p className="mt-2">{t('section_13_email')}<a href="mailto:c.contact@gmail.com" className="text-blue-600 hover:underline">c.contact@gmail.com</a></p>
+              <p className="mt-2">{t('section_13_email')}<a href="mailto:c.contact@kaiya.taxi" className="text-blue-600 hover:underline">c.contact@kaiya.taxi</a></p>
               <p>{t('section_13_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
             </div>
           </div>

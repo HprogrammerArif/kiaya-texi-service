@@ -113,7 +113,7 @@ export default async function TermsPage(props: { params: Promise<{ locale: strin
             <div className="rounded-xl bg-slate-50 p-6 shadow-sm border border-slate-100 mt-4 text-slate-700">
               <p className="font-semibold text-slate-900">{t('section_10_company')}</p>
               <p>{t('section_10_address')}</p>
-              <p className="mt-2">{t('section_10_email')}<a href="mailto:c.contact@gmail.com" className="text-blue-600 hover:underline">c.contact@gmail.com</a></p>
+              <p className="mt-2">{t('section_10_email')}<a href="mailto:c.contact@kaiya.taxi" className="text-blue-600 hover:underline">c.contact@kaiya.taxi</a></p>
               <p>{t('section_10_phone')}<a href="tel:+818082938862" className="text-blue-600 hover:underline">+81 80-8293-8862</a></p>
             </div>
           </div>
