@@ -8,7 +8,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 export function HeroBookingForm() {
  
   return (
-    <ScrollReveal  className="w-full max-w-6xl relative z-50">
+    <ScrollReveal  className="w-full max-w-6xl relative z-40">
       {/* 
         The wrapper has a fixed height that matches the "closed" form size. 
         This prevents the huge empty gap from pushing down the text below. 
