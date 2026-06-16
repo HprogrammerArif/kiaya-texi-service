@@ -20,6 +20,7 @@ import { HeroBookingForm } from '@/components/HeroBookingForm';
 import { ReadyToBook } from '@/components/ReadyToBook';
 import { TestimonialSlider } from '@/components/TestimonialSlider';
 import { ContactAndSupport } from '@/components/ContactAndSupport';
+import { BookingGuideModal } from '@/components/BookingGuideModal';
 
 
 type IndexPageProps = {
@@ -473,9 +474,15 @@ export default async function IndexPage(props: IndexPageProps) {
             <HeroBookingForm />
           </div>
 
+
+
+            {/* Booking guide — helps users pick Transfer vs Hourly before filling the form */}
+          <div className="flex w-full justify-center mt-48 md:mt-68 lg:mt-60 xl:mt-24">
+            <BookingGuideModal />
+          </div>
+
           {/* Subtext */}
-          <p className="xl:mt-24 mt-48 md:mt-68 lg:mt-60
-           text-center text-sm text-white/80 sm:text-base  max-w-5xl mx-auto ">
+          <p className="mx-auto mt-3 max-w-5xl text-center text-sm text-white/80 sm:text-base">
             {t('hero_subtext')}
           </p>
 

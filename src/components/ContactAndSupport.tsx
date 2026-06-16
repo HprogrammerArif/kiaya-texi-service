@@ -32,12 +32,49 @@ type ContactAndSupportProps = {
  */
 export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNode => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const mountTimeRef = React.useRef<number>(0);
+
+  React.useEffect(() => {
+    mountTimeRef.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
     
-    const formData = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const formData = new FormData(formEl);
+
+    // 1. Honeypot check
+    const honey = formData.get('_honey');
+    if (honey) {
+      setStatus('success');
+      formEl.reset();
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
+    // 2. Time-based check (less than 3 seconds since page load)
+    const submissionTime = Date.now();
+    if (submissionTime - mountTimeRef.current < 3000) {
+      setStatus('success');
+      formEl.reset();
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
+    // 3. Excessive link checking (more than 2 links/URLs/markup syntax)
+    const message = formData.get('message') as string;
+    if (message) {
+      const linkPattern = /https?:\/\/[^\s]+|www\.[^\s]+|\[url=|<a\s+/gi;
+      const links = message.match(linkPattern) || [];
+      if (links.length > 2) {
+        setStatus('success');
+        formEl.reset();
+        setTimeout(() => setStatus('idle'), 5000);
+        return;
+      }
+    }
     
     try {
       const response = await fetch('https://formsubmit.co/ajax/c.contact@kaiya.taxi', {
@@ -47,7 +84,7 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
       
       if (response.ok) {
         setStatus('success');
-        (e.target as HTMLFormElement).reset();
+        formEl.reset();
         setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
@@ -132,7 +169,15 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
         {/* Right Column: Form */}
         <ScrollReveal animation="right" delay={150}>
           <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_2px_20px_-8px_rgba(0,0,0,0.05)] sm:p-8">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6 relative" onSubmit={handleSubmit}>
+              {/* Honeypot Field */}
+              <input
+                type="text"
+                name="_honey"
+                tabIndex={-1}
+                autoComplete="off"
+                className="absolute -top-[9999px] -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
+              />
               {/* FormSubmit Configuration */}
               <input type="hidden" name="_subject" value="New Contact Form Submission from Kaiya" />
               <input type="hidden" name="_captcha" value="false" />
