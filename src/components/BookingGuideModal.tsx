@@ -336,7 +336,7 @@ export const BookingGuideModal = (): React.ReactNode => {
             <div
               role="alert"
               style={{ animation: 'bookingGuideSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
-              className="relative flex w-full items-start gap-3 rounded-2xl border border-slate-100 bg-white/95 p-4 shadow-2xl backdrop-blur-md"
+              className="relative flex w-full flex-col items-center gap-3 rounded-2xl border border-slate-100 bg-white/95 p-4 text-center shadow-2xl backdrop-blur-md md:flex-row md:items-start md:text-left"
             >
               <style>{`
                 @keyframes bookingGuideSlideIn {
@@ -368,14 +368,14 @@ export const BookingGuideModal = (): React.ReactNode => {
               </div>
 
               {/* Text info */}
-              <div className="flex-1 pr-4">
+              <div className="flex-1 pr-0 md:pr-4">
                 <h3 className="text-sm leading-tight font-bold text-slate-900">
                   {t('booking_guide_alert_title')}
                 </h3>
                 <p className="mt-1 text-xs leading-relaxed text-slate-500">
                   {t('booking_guide_alert_desc')}
                 </p>
-                <div className="mt-3 flex gap-2">
+                <div className="mt-3 flex justify-center gap-2 md:justify-start">
                   <button
                     type="button"
                     onClick={() => {
