@@ -331,23 +331,25 @@ export const BookingGuideModal = (): React.ReactNode => {
         mounted &&
         createPortal(
           <div
-            role="alert"
-            style={{ animation: 'bookingGuideSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
-            className="fixed right-4 bottom-4 z-[9998] flex w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-slate-100 bg-white/95 p-4 shadow-2xl backdrop-blur-md md:right-6 md:bottom-6"
+            className="fixed bottom-4 left-1/2 z-[9998] w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 md:bottom-6 md:left-auto md:right-6 md:translate-x-0"
           >
-            <style>{`
-              @keyframes bookingGuideSlideIn {
-                from {
-                  transform: translateY(1.5rem);
-                  opacity: 0;
+            <div
+              role="alert"
+              style={{ animation: 'bookingGuideSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+              className="relative flex w-full items-start gap-3 rounded-2xl border border-slate-100 bg-white/95 p-4 shadow-2xl backdrop-blur-md"
+            >
+              <style>{`
+                @keyframes bookingGuideSlideIn {
+                  from {
+                    transform: translateY(1.5rem);
+                    opacity: 0;
+                  }
+                  to {
+                    transform: translateY(0);
+                    opacity: 1;
+                  }
                 }
-                to {
-                  transform: translateY(0);
-                  opacity: 1;
-                }
-              }
-            `}</style>
-            <div className="flex w-full items-start gap-3">
+              `}</style>
               {/* Badge Icon */}
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                 <svg
