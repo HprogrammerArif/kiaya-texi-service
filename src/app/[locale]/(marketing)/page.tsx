@@ -470,19 +470,19 @@ export default async function IndexPage(props: IndexPageProps) {
           </h1>
 
           {/* Booking Widget */}
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full z-10">
             <HeroBookingForm />
           </div>
 
 
 
             {/* Booking guide — helps users pick Transfer vs Hourly before filling the form */}
-          <div className="flex w-full justify-center mt-48 md:mt-68 lg:mt-60 xl:mt-24">
+          {/* <div className="flex w-full justify-center mt-48 md:mt-68 lg:mt-60 xl:mt-24">
             <BookingGuideModal />
-          </div>
+          </div> */}
 
           {/* Subtext */}
-          <p className="mx-auto mt-3 max-w-5xl text-center text-sm text-white/80 sm:text-base">
+          <p className="mx-automax-w-5xl text-center text-sm text-white/80 sm:text-base    flex w-full justify-center mt-48 md:mt-68 lg:mt-60 xl:mt-24">
             {t('hero_subtext')}
           </p>
 
