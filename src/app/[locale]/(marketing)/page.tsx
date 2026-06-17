@@ -20,7 +20,6 @@ import { HeroBookingForm } from '@/components/HeroBookingForm';
 import { ReadyToBook } from '@/components/ReadyToBook';
 import { TestimonialSlider } from '@/components/TestimonialSlider';
 import { ContactAndSupport } from '@/components/ContactAndSupport';
-import { BookingGuideModal } from '@/components/BookingGuideModal';
 
 
 type IndexPageProps = {
