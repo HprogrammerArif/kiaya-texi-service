@@ -32,6 +32,14 @@
     "hero_subtext": "Transferts aéroport. Transferts hôtel. Longues distances. Location à l'heure. Toujours avec clarté, confort et un support fiable.",
     "features_title": "Un moyen plus fluide d'arriver et de se déplacer",
     "features_body_text": "Des solutions de transport privé flexibles conçues pour le confort, la commodité et des déplacements fiables dans tout le Japon.",
+
+    "vehicle_capacity_title": "Guide de capacité des véhicules",
+    "vehicle_capacity_description": "Choisissez le bon véhicule selon la taille de votre groupe. Chaque véhicule est adapté aux combinaisons passagers et bagages pour un voyage toujours confortable.",
+    "vehicle_capacity_note": "Les capacités sont indicatives. La capacité réelle dépend de la taille et de la forme des bagages. Pour les équipements de ski, les articles encombrants ou les articles spéciaux, veuillez nous contacter lors de la réservation.",
+    "vehicle_capacity_min_label": "Min",
+    "vehicle_capacity_suitable_label": "Adapté",
+    "vehicle_capacity_max_label": "Max",
+
     "booking_guide_trigger": "Vous ne savez pas comment réserver ? — Voir le guide",
     "booking_guide_eyebrow": "Avant de réserver",
     "booking_guide_title": "Comment utiliser le formulaire de réservation",
