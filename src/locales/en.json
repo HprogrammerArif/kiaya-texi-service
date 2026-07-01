@@ -9,7 +9,6 @@
     "sign_up_link": "Sign up",
     "book_now_link": "Book Now"
   },
-
   "Index": {
     "meta_title": "Kaiya Taxi — Premium Private Taxi & Airport Transfer in Hokkaido, Japan",
     "meta_description": "Kaiya Taxi is a licensed private transfer and taxi company based in Chitose, Hokkaido. We provide safe, comfortable, and reliable airport transfers, private transportation, and sightseeing services throughout Hokkaido with professional drivers and premium vehicles.",
@@ -32,25 +31,21 @@
     "hero_subtext": "Airport pickups. Hotel transfers. Long-distance rides. Hourly charter. All with clarity, comfort, and reliable support.",
     "features_title": "A Smoother Way to Arrive and Move",
     "features_body_text": "Flexible private transportation solutions designed for comfort, convenience, and reliable travel across Hokkaido.",
-
     "vehicle_capacity_title": "Vehicle Capacity Guide",
     "vehicle_capacity_description": "Choose the right vehicle for your group size. Each vehicle is matched to specific passenger and luggage combinations so you always travel comfortably.",
     "vehicle_capacity_note": "Capacities are guidelines. Actual capacity depends on luggage size and shape. For ski equipment, bulky gear, or special items, please contact us when booking.",
     "vehicle_capacity_min_label": "Min",
     "vehicle_capacity_suitable_label": "Suitable",
     "vehicle_capacity_max_label": "Max",
-
     "booking_guide_trigger": "Not sure how to book? — View guide",
     "booking_guide_eyebrow": "Before you book",
     "booking_guide_title": "How to use the booking form",
     "booking_guide_close": "Close guide",
     "booking_guide_questions": "Questions? Contact us before booking and we'll help you choose the right service.",
     "booking_guide_cta": "Got it — start booking",
-
     "booking_guide_alert_title": "Need help booking?",
     "booking_guide_alert_desc": "Read our step-by-step guide to choose between Transfer and Hourly packages.",
     "booking_guide_alert_view": "View Guide",
-
     "booking_guide_transfer_label": "Transfer",
     "booking_guide_transfer_intro": "Enter your pickup and drop-off locations. Select locations from the list or search using Google Maps.",
     "booking_guide_transfer_rule_1": "Additional stops can be added during the trip if needed.",
@@ -65,8 +60,6 @@
     "booking_guide_hourly_rule_3": "For more time, please select a larger package when booking.",
     "booking_guide_hourly_rule_4": "Extensions beyond the booked service time are not permitted.",
     "booking_guide_hourly_rule_5": "Additional mileage will incur extra charges.",
-
-
     "feature_1_title": "Airport Arrivals",
     "feature_1_description": "Professional pickup at New Chitose Airport with real-time flight tracking and hassle-free arrival support.",
     "feature_2_title": "Hotel & Transfers",
@@ -338,7 +331,7 @@
     "change_language": "Change language"
   },
   "Footer": {
-    "about_text": "Welcome to kiaya taxi, your trusted and registered transportation service provider in kiaya, Japan.",
+    "about_text": "Welcome to Kaiya taxi, your trusted and registered transportation service provider in Kaiya, Japan.",
     "heading_quick_links": "QUICK LINKS",
     "heading_legal": "LEGAL",
     "heading_contact": "CONTACT",
@@ -478,7 +471,6 @@
     "meta_description": "Important information about Kaiya's services, operations, and business practices.",
     "page_title": "Commercial Disclosure",
     "page_subtitle": "Important information about Kaiya's services, operations, and business practices.",
-    
     "section_1_title": "1. Company Information",
     "section_1_company_label": "Company Name:",
     "section_1_company": "Kaiya, Inc.",
@@ -487,7 +479,6 @@
     "section_1_contact_label": "Contact:",
     "section_1_email": "Email: ",
     "section_1_phone": "Phone / WhatsApp: ",
-    
     "section_2_title": "2. Services Offered",
     "section_2_desc": "Kaiya provides premium private transportation services in the Hokkaido and Tokyo regions of Japan. Our service offerings include:",
     "section_2_li_1_strong": "Airport Transfers:",
@@ -502,13 +493,11 @@
     "section_2_li_5_text": " Customized full-day transportation services for tours and excursions",
     "section_2_li_6_strong": "Related Services:",
     "section_2_li_6_text": " Additional transportation and concierge support as requested",
-    
     "section_3_title": "3. Service Areas",
     "section_3_desc": "Kaiya operates throughout:",
     "section_3_li_1": "Hokkaido (including Sapporo, Asahikawa, Hakodate, Chitose, and surrounding regions)",
     "section_3_li_2": "Tokyo Metropolitan Area",
     "section_3_footer": "Please contact us for custom services outside these standard areas or for multi-day trips.",
-    
     "section_4_title": "4. Vehicle Fleet and Safety",
     "section_4_desc_1": "Kaiya maintains a modern fleet of premium vehicles including:",
     "section_4_li_1": "Luxury sedans for 1-3 passengers",
@@ -519,7 +508,6 @@
     "section_4_li_5": "Equipped with safety features and child car seats (available upon request)",
     "section_4_li_6": "Insured with comprehensive coverage",
     "section_4_li_7": "Operated by professional, trained drivers",
-    
     "section_5_title": "5. Driver Qualifications and Standards",
     "section_5_desc": "All Kaiya drivers meet rigorous standards:",
     "section_5_li_1": "Valid professional driver's license with clean driving record",
@@ -528,7 +516,6 @@
     "section_5_li_4": "Knowledge of local routes and traffic patterns",
     "section_5_li_5": "Professional appearance and conduct standards",
     "section_5_li_6": "Communication skills and language capabilities",
-    
     "section_6_title": "6. Pricing Information",
     "section_6_desc": "Kaiya is committed to transparent pricing:",
     "section_6_li_1": "Quotes are provided upfront without hidden fees",
@@ -537,7 +524,6 @@
     "section_6_li_4": "Payment can be arranged via multiple methods for your convenience",
     "section_6_li_5": "All prices are quoted in Japanese Yen unless otherwise specified",
     "section_6_footer": "For detailed pricing information or a quote for your specific needs, please contact us directly.",
-    
     "section_7_title": "7. Special Services and Accommodations",
     "section_7_desc": "Kaiya specializes in accommodating special needs and preferences:",
     "section_7_li_1_strong": "Child Car Seats:",
@@ -550,7 +536,6 @@
     "section_7_li_4_text": " English and other languages available depending on booking",
     "section_7_li_5_strong": "Flexible Scheduling:",
     "section_7_li_5_text": " Early morning, late evening, and same-day bookings accommodated when possible",
-    
     "section_8_title": "8. Airport Pickup Procedures",
     "section_8_desc": "For airport pickups, Kaiya provides:",
     "section_8_li_1": "Flight tracking to monitor arrival times",
@@ -559,7 +544,6 @@
     "section_8_li_4": "Professional assistance with luggage and orientation",
     "section_8_li_5": "Reliable transportation to your destination",
     "section_8_footer": "Please provide your flight information at the time of booking to ensure smooth service.",
-    
     "section_9_title": "9. Cancellation and Modification Policies",
     "section_9_desc": "Kaiya's policies are designed to be fair to both passengers and our operations:",
     "section_9_li_1_strong": "Cancellations 24+ hours before service:",
@@ -571,7 +555,6 @@
     "section_9_li_4_strong": "Modifications:",
     "section_9_li_4_text": " Free changes if made 24+ hours in advance",
     "section_9_footer": "We understand plans change and will work with you to resolve any issues fairly.",
-    
     "section_10_title": "10. Insurance and Liability",
     "section_10_desc": "Kaiya maintains comprehensive insurance coverage for all vehicles and operations:",
     "section_10_li_1": "Full vehicle liability insurance",
@@ -579,7 +562,6 @@
     "section_10_li_3": "Property damage coverage",
     "section_10_li_4": "Professional indemnity insurance",
     "section_10_footer": "This ensures professional protection for all parties during service delivery.",
-    
     "section_11_title": "11. Quality Standards and Complaints",
     "section_11_desc": "Kaiya is committed to the highest quality standards:",
     "section_11_li_1": "Regular vehicle maintenance and inspection",
@@ -587,17 +569,14 @@
     "section_11_li_3": "Customer satisfaction focus",
     "section_11_li_4": "Response to feedback and continuous improvement",
     "section_11_footer": "If you experience any issues with our service, please contact us immediately. We are committed to resolving complaints.",
-    
     "section_12_title": "12. Environmental and Social Responsibility",
     "section_12_desc": "Kaiya is committed to responsible business practices, maintaining modern vehicles with lower emissions and supporting the local Hokkaido community through professional employment and service excellence.",
-    
     "section_13_title": "13. Contact for Inquiries",
     "section_13_desc": "For more information about any aspect of our commercial operations, or to discuss custom services:",
     "section_13_company": "Kaiya, Inc.",
     "section_13_address": "Japan, Hokkaido, Chitose Shinano 4-11-4-2F-C",
     "section_13_email": "Email: ",
     "section_13_phone": "Phone / WhatsApp: ",
-    
     "cta_title": "Need help?",
     "cta_desc": "Contact Kaiya support for any booking or legal questions.",
     "cta_button": "Contact Us"
