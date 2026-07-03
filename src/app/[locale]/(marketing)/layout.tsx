@@ -68,7 +68,7 @@ export default async function Layout(props: {
       }
       rightNav={
         <>
-         <li>
+          <li>
             <LocaleSwitcher />
           </li>
 
@@ -77,13 +77,11 @@ export default async function Layout(props: {
               href="https://book.kaiya.taxi/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-slate-950 px-3 md:px-4 lg:px-5 py-2 text-xs md:text-sm font-bold text-white shadow-xs transition-all hover:bg-slate-800 active:scale-95"
+              className="inline-block rounded-full bg-slate-950 px-3 py-2 text-xs font-bold text-white shadow-xs transition-all hover:bg-slate-800 active:scale-95 md:px-4 md:text-sm lg:px-5"
             >
               {t('book_now_link')}
             </a>
           </li>
-
-         
         </>
       }
     >

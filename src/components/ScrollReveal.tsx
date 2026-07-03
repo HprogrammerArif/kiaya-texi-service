@@ -40,7 +40,7 @@ export const ScrollReveal = (props: ScrollRevealProps): React.ReactNode => {
 
   React.useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el) {return;}
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,7 +55,7 @@ export const ScrollReveal = (props: ScrollRevealProps): React.ReactNode => {
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () =>{  observer.disconnect(); };
   }, [props.threshold]);
 
   const anim = animationClass[props.animation ?? 'up'];

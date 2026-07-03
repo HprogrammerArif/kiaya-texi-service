@@ -330,12 +330,12 @@ export const BookingGuideModal = (): React.ReactNode => {
       {showAlert &&
         mounted &&
         createPortal(
-          <div
-            className="fixed bottom-4 left-1/2 z-[9998] w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 md:bottom-6 md:left-auto md:right-6 md:translate-x-0"
-          >
+          <div className="fixed bottom-4 left-1/2 z-[9998] w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 md:right-6 md:bottom-6 md:left-auto md:translate-x-0">
             <div
               role="alert"
-              style={{ animation: 'bookingGuideSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+              style={{
+                animation: 'bookingGuideSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              }}
               className="relative flex w-full flex-col items-center gap-3 rounded-2xl border border-slate-100 bg-white/95 p-4 text-center shadow-2xl backdrop-blur-md md:flex-row md:items-start md:text-left"
             >
               <style>{`
