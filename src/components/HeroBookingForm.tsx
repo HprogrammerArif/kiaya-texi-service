@@ -16,7 +16,7 @@ export function HeroBookingForm() {
         <iframe
           src="https://book.kaiya.taxi/booking-form.php"
           // className="absolute top-0 left-0 h-[550px] w-full border-none bg-transparent sm:h-[450px] md:h-[450px]"
-          className="absolute top-0 left-0 h-[650px] lg:h-[550px] w-full border-none bg-transparent"
+          className="absolute top-0 left-0 h-[700px] lg:h-[550px] w-full border-none bg-transparent"
           title="Kaiya Booking Form"
           scrolling="no"
         />
