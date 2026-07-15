@@ -8,7 +8,7 @@ export const AppConfig = {
   name: 'Kaiya Taxi',
   logo: '/assets/logo/kaiyaLogoBlack.svg',
   i18n: {
-    locales: ['en', 'fr', 'zh', 'ko', 'th', 'vi'],
+    locales: ['en', 'ja', 'fr', 'zh', 'ko', 'th', 'vi'],
     defaultLocale: 'en',
     localePrefix,
   },
