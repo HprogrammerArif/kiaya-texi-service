@@ -8,6 +8,8 @@ type JsonLdProps = {
  * Renders multiple JSON-LD structured data scripts for the Kaiya taxi service.
  * Includes TaxiService, Organization, WebSite (with SearchAction), and
  * BreadcrumbList schemas to maximize rich result visibility in Google Search.
+ * @param props - The component props containing the current locale.
+ * @returns Multiple script elements with JSON-LD structured data.
  */
 export const JsonLd = (props: JsonLdProps): React.ReactNode => {
   const baseUrl = getBaseUrl();

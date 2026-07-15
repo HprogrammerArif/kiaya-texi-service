@@ -12,6 +12,8 @@ type FaqJsonLdProps = {
  * This enables FAQ rich results in Google Search — questions and answers
  * appear as expandable dropdowns directly in search results, increasing
  * click-through rates and occupying more search result real estate.
+ * @param props - The component props containing FAQ items.
+ * @returns A script element with FAQPage JSON-LD structured data.
  */
 export const FaqJsonLd = (props: FaqJsonLdProps): React.ReactNode => {
   const faqSchema = {
