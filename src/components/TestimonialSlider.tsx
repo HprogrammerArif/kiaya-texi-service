@@ -6,7 +6,7 @@ import Image from 'next/image';
 import * as React from 'react';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
-export type Testimonial = {
+type Testimonial = {
   name: string;
   country: string;
   quote: string;
@@ -21,6 +21,8 @@ type TestimonialSliderProps = {
 
 /**
  * A swiper slider for customer testimonials using Embla Carousel with smooth AutoScroll.
+ * @param props - Component properties
+ * @returns The rendered component
  */
 export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNode => {
   const [emblaRef] = useEmblaCarousel(
@@ -89,7 +91,7 @@ export const TestimonialSlider = (props: TestimonialSliderProps): React.ReactNod
 
                     {/* Footer: Stars */}
                     <div className="mt-4 flex gap-1 text-[#d97706] sm:mt-6">
-                      {[...Array(5)].map((_, i) => (
+                      {Array.from({ length: 5 }).map((_, i) => (
                         <svg
                           key={i}
                           className="size-5 shrink-0"

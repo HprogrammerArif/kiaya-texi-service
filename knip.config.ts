@@ -3,6 +3,7 @@ import type { KnipConfig } from 'knip';
 const config: KnipConfig = {
   // Files to exclude from Knip analysis
   ignore: [
+    'replace-email.cjs',
     'src/libs/I18n.ts',
     'src/types/I18n.ts',
     'src/libs/ApiClient.ts',
@@ -16,6 +17,8 @@ const config: KnipConfig = {
     'vite',
     '@hookform/resolvers',
     'vitest-browser-react',
+    'embla-carousel-autoplay',
+    'sharp',
   ],
   // Include custom Playwright test file suffixes
   playwright: {

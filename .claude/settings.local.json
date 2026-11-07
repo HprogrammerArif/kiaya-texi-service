@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun run *)",
+      "Bash(node -e \"const s=require\\('./package.json'\\).scripts; console.log\\(JSON.stringify\\({'check:types':s['check:types'],'check:i18n':s['check:i18n'],lint:s.lint},null,2\\)\\)\")",
+      "PowerShell(npx tsc --noEmit --pretty)"
+    ]
+  }
+}

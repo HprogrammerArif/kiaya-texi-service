@@ -29,6 +29,8 @@ type ContactAndSupportProps = {
 
 /**
  * Contact & Support section matching the provided design.
+ * @param props - Component properties
+ * @returns The rendered component
  */
 export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNode => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -38,7 +40,7 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
     mountTimeRef.current = Date.now();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
 
@@ -50,7 +52,9 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
     if (honey) {
       setStatus('success');
       formEl.reset();
-      setTimeout(() =>{  setStatus('idle'); }, 5000);
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
       return;
     }
 
@@ -59,19 +63,23 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
     if (submissionTime - mountTimeRef.current < 3000) {
       setStatus('success');
       formEl.reset();
-      setTimeout(() =>{  setStatus('idle'); }, 5000);
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
       return;
     }
 
     // 3. Excessive link checking (more than 2 links/URLs/markup syntax)
     const message = formData.get('message') as string;
     if (message) {
-      const linkPattern = /https?:\/\/[^\s]+|www\.[^\s]+|\[url=|<a\s+/gi;
+      const linkPattern = /https?:\/\/[^\s]+|www\.[^\s]+|\[url=|<a\s+/giu;
       const links = message.match(linkPattern) ?? [];
       if (links.length > 2) {
         setStatus('success');
         formEl.reset();
-        setTimeout(() =>{  setStatus('idle'); }, 5000);
+        setTimeout(() => {
+          setStatus('idle');
+        }, 5000);
         return;
       }
     }
@@ -85,7 +93,9 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
       if (response.ok) {
         setStatus('success');
         formEl.reset();
-        setTimeout(() =>{  setStatus('idle'); }, 5000);
+        setTimeout(() => {
+          setStatus('idle');
+        }, 5000);
       } else {
         setStatus('error');
       }
@@ -117,7 +127,7 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
               <div className="mb-10 space-y-4">
                 {/* Phone Card */}
                 <a
-                  href={`tel:${props.phone.value.replaceAll(/\s+/g, '')}`}
+                  href={`tel:${props.phone.value.replaceAll(/\s+/gu, '')}`}
                   className="group flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4 transition-all hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-sm"
                 >
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-slate-100 bg-white shadow-sm transition-transform group-hover:scale-110">
@@ -287,11 +297,15 @@ export const ContactAndSupport = (props: ContactAndSupportProps): React.ReactNod
                     disabled={status === 'loading' || status === 'success'}
                     className="inline-flex w-full items-center justify-center rounded-full bg-black px-8 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:scale-105 hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:scale-95 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100 sm:w-auto"
                   >
-                    {status === 'loading'
-                      ? 'Sending...'
-                      : (status === 'success'
-                        ? 'Sent Successfully! ✓'
-                        : props.form.submitText)}
+                    {(() => {
+                      if (status === 'loading') {
+                        return 'Sending...';
+                      }
+                      if (status === 'success') {
+                        return 'Sent Successfully! ✓';
+                      }
+                      return props.form.submitText;
+                    })()}
                   </button>
                   {status === 'error' && (
                     <p className="mt-3 text-sm font-medium text-red-600">
